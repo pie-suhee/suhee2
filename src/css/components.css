@@ -1,0 +1,153 @@
+/* iconLayout S: */
+.iconLayout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.iconLayout .smallZip {
+    max-width: 130px;
+    aspect-ratio: 1/1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.iconLayout > * {
+    max-width: 130px;
+    flex: 1;
+}
+/* iconLayout E: */
+
+/* icon S: */
+.iconBox {
+    position: relative;
+}
+
+.icon {
+    display: block;
+    aspect-ratio: 1/1;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+}
+
+.icon.small {
+    max-width: 55px;
+    border-radius: 12px;
+}
+
+.icon.big {
+    max-width: 130px;
+    border-radius: 15px;
+}
+
+.icon.lp {
+    border-radius: 50%;
+    animation: spin 4s linear infinite;
+}
+
+.icon + span {
+    font-size: 12px;
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    transform: translate(-50%, 100%);
+}
+
+.icon.big + span {
+    bottom: -4px;
+}
+/* icon E: */
+
+/* widget S: */
+.widget {
+    max-width: 260px;
+    height: 130px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 17px;
+    position: relative;
+}
+
+.widget::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 17px;
+    position: absolute;
+    z-index: 10;
+}
+
+.widget .todayDate {
+    width: 100%;
+    height: 100%;
+    padding: 5%;
+    border-radius: 17px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: 8%;
+    position: relative;
+    z-index: 20;
+}
+
+.widget .todayDate .weekday {
+    font-size: 26px;
+    color: rgba(255, 255, 255, 1);
+    font-weight: 400;
+    
+}
+
+.widget .todayDate .day {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 1);
+    font-weight: 700;
+}
+
+.widget .clock {
+    font-size: 80px;
+    color: rgba(255, 255, 255, 1);
+    font-weight: 700;
+    line-height: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+}
+/* widget E: */
+
+
+@media all and (max-width: 900px) {
+    /* iconLayout S: */
+    .iconLayout {
+        width: 260px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 30px;
+    }
+    /* iconLayout E: */
+
+    /* widget S: */
+    .widget {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+    /* widget E: */
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

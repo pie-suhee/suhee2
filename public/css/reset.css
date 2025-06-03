@@ -5,6 +5,7 @@
 
 html,
 body,
+main,
 div,
 span,
 applet,
@@ -97,8 +98,8 @@ textarea {
   color: var(--neutral-black);
   font: inherit;
   vertical-align: baseline;
-  outline:none;
-  text-decoration:none;
+  outline: none;
+  text-decoration: none;
 }
 
 /* HTML5 display-role reset for older browsers */

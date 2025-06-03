@@ -1,11 +1,14 @@
-import Header from "../components/Header"
+import Footer from "../components/Footer"
+import IconLayout from "../components/IconLayout"
+import '../css/index.css';
 
-function App() {
+function Main() {
   return (
-    <>
-      <Header />
-    </>
+    <main className="main">
+      <IconLayout />
+      <Footer />
+    </main>
   );
 }
 
-export default App;
+export default Main;
