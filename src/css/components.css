@@ -4,7 +4,7 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 10px;
 }
 
 .iconLayout .smallZip {
@@ -13,7 +13,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    gap: 20px;
+    gap: 10px;
 }
 
 .iconLayout > * {
@@ -35,8 +35,13 @@
     background-size: contain;
 }
 
+img.icon {
+    object-fit: contain;
+    cursor: pointer;
+}
+
 .icon.small {
-    max-width: 55px;
+    width: 55px;
     border-radius: 12px;
 }
 
@@ -51,11 +56,11 @@
 }
 
 .icon + span {
+    display: inline-block;
+    width: 100%;
     font-size: 12px;
-    position: absolute;
-    bottom: -2px;
-    left: 50%;
-    transform: translate(-50%, 100%);
+    position: relative;
+    text-align: center;
 }
 
 .icon.big + span {
@@ -63,10 +68,70 @@
 }
 /* icon E: */
 
+/* alarm S: */
+.alarmBox {
+    max-width: 300px;
+    width: 80vw;
+    height: 80px;
+    background-color: rgba(56, 56, 56, 0.7);
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    z-index: 100;
+}
+
+.alarmBox.show {
+    display: flex;
+    top: 10px;
+    animation: fadeInDown 0.4s forwards;
+}
+
+.alarmBox.hide {
+    animation: fadeInUp 0.4s forwards;
+}
+
+.alarmBox > img {
+    filter: saturate(0.7);
+}
+
+.alarmBox .alarmText {
+    width: 60%;
+}
+
+.alarmBox .alarmText .alarmTitle {
+    transform: scaleY(1.04);
+    text-align: center;
+    font-family: Pretendard;
+    font-weight: 400;
+    font-size: 16px;
+    color: rgba(245, 245, 245, 1);
+    line-height: 1.4;
+    letter-spacing: 1.2px;
+}
+
+.alarmBox .alarmText .alarmContent {
+    margin-top: 10px;
+    transform: scaleY(1.04);
+    text-align: center;
+    font-family: Pretendard;
+    font-weight: 200;
+    font-size: 14px;
+    color: rgba(245, 245, 245, 1);
+    line-height: 1.4;
+}
+/* alarm E: */
+
 /* widget S: */
 .widget {
     max-width: 260px;
-    height: 130px;
+    height: 152px;
+    aspect-ratio: 260/130;
     background-color: rgba(0, 0, 0, 0.4);
     border-radius: 17px;
     position: relative;
@@ -131,7 +196,7 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2, 1fr);
-        gap: 30px;
+        gap: 10px;
     }
     /* iconLayout E: */
 
@@ -150,4 +215,22 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+@keyframes fadeInDown {
+	0% {
+		transform: translate3d(-50%, -100%, 0);
+	}
+	100% {
+		transform: translate3d(-50%, 0, 0);
+	}
+}
+
+@keyframes fadeInUp {
+	0% {
+		transform: translate3d(-50%, 0, 0);
+	}
+    100% {
+		transform: translate3d(-50%, -100%, 0); 
+    }
 }

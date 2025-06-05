@@ -1,0 +1,17 @@
+{
+  "address": {
+    "alarmTitle": "주소를 복사했습니다.",
+    "alarmContent": "다른 곳에 붙여넣기 해보세요.",
+    "copy": "서울특별시 송파구 중대로 38길 3-12"
+  },
+  "e-mail": {
+    "alarmTitle": "e-mail을 복사했습니다.",
+    "alarmContent": "다른 곳에 붙여넣기 해보세요.",
+    "copy": "tngmltngml4@naver.com"
+  },
+  "phone": {
+    "alarmTitle": "전화번호를 복사했습니다.",
+    "alarmContent": "다른 곳에 붙여넣기 해보세요.",
+    "copy": "01072272783"
+  }
+}

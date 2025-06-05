@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import '../css/components.css';
 
-const Icon = ({ img, link, size, txt }) => {
+const LinkIcon = ({ img, link, size, txt }) => {
   let imgSrc;
 
   try {
@@ -18,4 +18,4 @@ const Icon = ({ img, link, size, txt }) => {
   );
 };
 
-export default Icon;
+export default LinkIcon;
