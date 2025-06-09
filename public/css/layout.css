@@ -14,6 +14,10 @@ html,
 .playfair {
   font-family: 'Playfair Display', serif;
 }
+
+.pretendard {
+  font-family: "Pretendard";
+}
 /* 글씨체 E: */
 
 :root {
@@ -54,14 +58,6 @@ html,
 }
 /* sub E: */
 
-/* scroll_wrap S: */
-.scroll_wrap {
-  width: 100%;
-  height: 100vh;
-  overflow-y: auto;
-}
-/* scroll_wrap E: */
-
 /* page-motion S: */
 .profile-motion {
   min-width: 100%;
@@ -84,6 +80,12 @@ html,
   position: relative;
 }
 
+.sub_profile .scroll_wrap {
+  width: 100%;
+  height: 100vh;
+  overflow-y: auto;
+}
+
 .sub_profile .profile {
   max-width: 800px;
   margin: 0 auto;
@@ -94,6 +96,7 @@ html,
 }
 
 .sub_profile .title {
+  padding-left: 24px;
   text-align: center;
   letter-spacing: 24px;
   font-size: 30px;
@@ -235,6 +238,7 @@ html,
   bottom: 0;
   right: 0;
   transform: scale(0.5) translate(50%, 50%);
+  z-index: -1;
 }
 
 .sub_profile .sticker3 {
@@ -243,6 +247,100 @@ html,
   transform: scale(0.8) translate(-20%, 20%);
 }
 /* profile E: */
+
+/* history S: */
+.sub_history {
+  background-color: #fcfcf8;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAY...");
+  background-size: 200px 200px;
+  opacity: 0.99;
+  position: relative;
+}
+
+.sub_history .scroll_wrap {
+  width: 100%;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.sub_history .history {
+  display: grid;
+  grid-template-columns: 1.25fr 0.5fr 1.25fr;
+}
+
+.sub_history .history .history-item {
+  padding: 0 10px;
+  line-height: 1.5;
+  word-break: keep-all;
+}
+
+.sub_history .history .history-item .red {
+  color: rgba(237, 34, 36, 1);
+}
+
+.sub_history .history .history-item.line {
+  padding: 50px 10px;
+  background-color: rgba(237, 34, 36, 1);
+  font-size: clamp(30px, 8vw, 100px);
+  color: rgba(255, 255, 255, 1);
+  font-weight: 800;
+  line-height: 1;
+}
+
+.sub_history .history .history-item.left {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.sub_history .history .history-item.right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  text-align: right;
+}
+
+.sub_history .history .history-item.title {
+  padding: 10vh 0 10vh 20px;
+  font-size: clamp(24px, 7vw, 100px);
+  font-weight: 500;
+  line-height: 1;
+}
+
+.sub_history .history .history-item > ul > li + li {
+  margin-top: 10px;
+}
+
+.sub_history .history .history-item ul li .date {
+  display: inline-block;
+  position: relative;
+  font-family: "Pretendard";
+  font-size: clamp(18px, 2.5vw, 30px);
+  font-weight: 500;
+}
+
+.sub_history .history .history-item ul li .date::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0.1em;
+  width: 0;
+  height: 50%;
+  background: #fff9aa;
+  z-index: -1;
+  animation: 1s line 0.5s cubic-bezier(0, 0, 0.28, 1.05) forwards;
+  transform-origin: left;
+}
+
+.sub_history .history .history-item ul li .content {
+  margin-top: 5px;
+  font-weight: 600;
+}
+
+.sub_history .history .history-item:last-child {
+  height: 180px;
+}
+/* history E: */
 
 /* footer S: */
 footer {
@@ -308,15 +406,26 @@ footer ul {
     border-left: none;
   }
   /* profile E: */
+
+  /* history S: */
+  .sub_history .history .history-item ul li .date {
+    font-size: 18px;
+  }
+  /* history E: */
 }
 
 @keyframes imperfectRotate {
-  0%   { transform: rotate(0deg) translate(20%, -20%); }
-  10%  { transform: rotate(3deg) translate(20%, -20%); }
-  25%  { transform: rotate(2deg) translate(20%, -20%); }
-  40%  { transform: rotate(4deg) translate(20%, -20%); }
-  55%  { transform: rotate(1deg) translate(20%, -20%); }
-  70%  { transform: rotate(5deg) translate(20%, -20%); }
-  85%  { transform: rotate(2.5deg) translate(20%, -20%); }
-  100% { transform: rotate(0deg) translate(20%, -20%); }
+  0%   { transform: rotate(0deg) translate(10%, -40%); }
+  10%  { transform: rotate(3deg) translate(10%, -40%); }
+  25%  { transform: rotate(2deg) translate(10%, -40%); }
+  40%  { transform: rotate(4deg) translate(10%, -40%); }
+  55%  { transform: rotate(1deg) translate(10%, -40%); }
+  70%  { transform: rotate(5deg) translate(10%, -40%); }
+  85%  { transform: rotate(2.5deg) translate(10%, -40%); }
+  100% { transform: rotate(0deg) translate(10%, -40%); }
+}
+
+@keyframes line {
+  0%   { width: 0; }
+  100% { width: 100%; }
 }

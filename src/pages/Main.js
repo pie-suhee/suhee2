@@ -7,7 +7,7 @@ function Main() {
   return (
     <main className="main">
       <div className="iconLayout">
-        <LinkIcon link={"/profile"} img={"lp"} size={"big"} txt={"profile"} />
+        <LinkIcon link={"/history"} img={"lp"} size={"big"} txt={"history"} />
 
         <div className="smallZip">
           <LinkIcon link={"/"} img={"star"} size={"small"} txt={"skill"} />
@@ -23,7 +23,7 @@ function Main() {
           <LinkIcon link={"/"} img={"strawberry"} size={"small"} txt={"project"} />
         </div>
 
-        <LinkIcon link={"/"} img={"duck"} size={"big"} txt={"history"} />
+        <LinkIcon link={"/profile"} img={"duck"} size={"big"} txt={"profile"} />
 
         <Widget />
       </div>
