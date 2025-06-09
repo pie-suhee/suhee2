@@ -4,11 +4,35 @@
 /* 글씨체 S: */
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
 
 html {
   font-family: "Inter", sans-serif;
 }
+
+.playfair {
+  font-family: 'Playfair Display', serif;
+}
 /* 글씨체 E: */
+
+:root {
+  --profile-border: 2px solid rgba(0, 0, 0, 1);
+}
+
+/* 스크롤 S: */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.3);
+}
+/* 스크롤 E: */
 
 /* main S: */
 .main {
@@ -19,6 +43,120 @@ html {
   background-size: cover;
 }
 /* main E: */
+
+/* sub S: */
+.sub {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+/* sub E: */
+
+/* scroll_wrap S: */
+.scroll_wrap {
+  width: 100%;
+  height: 100vh;
+  overflow-y: scroll;
+}
+/* scroll_wrap E: */
+
+/* page-motion S: */
+.profile-motion {
+  min-width: 100%;
+  min-height: 100%;
+  background-color: rgba(255, 255, 255, 1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform-origin: center;
+  z-index: 20;
+}
+/* page-motion E: */
+
+/* profile S: */
+.profile {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 100px 20px 230px;
+  font-family: 'Playfair Display', serif;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.profile .title {
+  text-align: center;
+  letter-spacing: 24px;
+  font-size: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.profile .section {
+  display: grid;
+}
+
+.profile .full-name {
+  grid-template-columns: 1fr 2fr;
+}
+
+.profile .basic-info {
+  display: grid;
+  grid-template-columns: 0.8fr 2.2fr;
+  align-items: stretch;
+  gap: 20px;
+}
+
+.profile .photo-box {
+  background: #eee;
+  aspect-ratio: 3.5/4.5;
+  width: 100%;
+  border: var(--profile-border);
+}
+
+.profile .photo-box > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.profile .right-info {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+}
+
+.profile .traits,
+.profile .family {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.profile .info-field {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  line-height: 35px;
+}
+
+.profile .info-field,
+.profile .info {
+  background-color: rgba(255, 255, 255, 1);
+  border: var(--profile-border);
+}
+
+.profile .info + .info-field,
+.profile .info:not(:nth-child(2)),
+.profile .section.type2 .info {
+  border-top: none;
+}
+
+.profile .section:not(.type2) .info-field + .info {
+  border-left: none;
+}
+/* profile E: */
 
 /* footer S: */
 footer {
@@ -31,6 +169,7 @@ footer {
   left: 0;
   right: 0;
   bottom: 25px;
+  z-index: 100;
 }
 
 footer ul {
@@ -43,5 +182,21 @@ footer ul {
 @media all and (max-width: 900px) {
   .main {
     padding: 5vh 10% 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .profile .basic-info {
+    grid-template-columns: 1fr;
+  }
+
+  .profile .right-info {
+    grid-template-columns: 1fr;
+  }
+
+  .profile .traits,
+  .profile .family,
+  .profile .full-name {
+    grid-template-columns: 1fr;
   }
 }

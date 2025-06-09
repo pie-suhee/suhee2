@@ -109,7 +109,7 @@ img.icon {
     text-align: center;
     font-family: Pretendard;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 15px;
     color: rgba(245, 245, 245, 1);
     line-height: 1.4;
     letter-spacing: 1.2px;
@@ -121,7 +121,7 @@ img.icon {
     text-align: center;
     font-family: Pretendard;
     font-weight: 200;
-    font-size: 14px;
+    font-size: 12px;
     color: rgba(245, 245, 245, 1);
     line-height: 1.4;
 }
@@ -231,6 +231,6 @@ img.icon {
 		transform: translate3d(-50%, 0, 0);
 	}
     100% {
-		transform: translate3d(-50%, -100%, 0); 
+		transform: translate3d(-50%, -100%, 0);
     }
 }

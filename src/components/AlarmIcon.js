@@ -13,7 +13,7 @@ const AlarmIcon = ({ img, type, size, txt, isAnyAlarmVisible, setIsAnyAlarmVisib
   }
 
   /* 알람 팝업, 복사 기능 S: */
-  const [showAlarm, setShowAlarm] = useState(false);
+  const [alarmState, setAlarmState] = useState('');
   
   const handleClick = () => {
     if (isAnyAlarmVisible) return;
@@ -24,12 +24,16 @@ const AlarmIcon = ({ img, type, size, txt, isAnyAlarmVisible, setIsAnyAlarmVisib
       });
     }
 
-    setShowAlarm(true);
+    setAlarmState('show');
     setIsAnyAlarmVisible(true);
 
     setTimeout(() => {
-      setShowAlarm(false);
-      setIsAnyAlarmVisible(false);
+      setAlarmState('hide');
+
+      setTimeout(() => {
+        setAlarmState('finish');
+        setIsAnyAlarmVisible(false);
+      }, 400);
     }, 3000);
   };
   /* 알람 팝업, 복사 기능 E: */
@@ -41,7 +45,7 @@ const AlarmIcon = ({ img, type, size, txt, isAnyAlarmVisible, setIsAnyAlarmVisib
         <span>{txt}</span>
       </div>
 
-      <div className={`alarmBox ${showAlarm ? 'show' : 'hide'}`}>
+      <div className={`alarmBox ${alarmState}`}>
         <img src={imgSrc} className={`icon ${size} ${img}`} alt={`${img} 아이콘`} />
 
         <div className="alarmText">
