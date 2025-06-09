@@ -6,7 +6,8 @@
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
 
-html {
+html,
+.inter {
   font-family: "Inter", sans-serif;
 }
 
@@ -57,7 +58,7 @@ html {
 .scroll_wrap {
   width: 100%;
   height: 100vh;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 /* scroll_wrap E: */
 
@@ -75,17 +76,24 @@ html {
 /* page-motion E: */
 
 /* profile S: */
-.profile {
+.sub_profile {
+  background-color: #fcfcf8;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAY...");
+  background-size: 200px 200px;
+  opacity: 0.99;
+  position: relative;
+}
+
+.sub_profile .profile {
   max-width: 800px;
   margin: 0 auto;
-  padding: 100px 20px 230px;
-  font-family: 'Playfair Display', serif;
+  padding: 100px 20px 180px;
   display: flex;
   flex-direction: column;
   gap: 50px;
 }
 
-.profile .title {
+.sub_profile .title {
   text-align: center;
   letter-spacing: 24px;
   font-size: 30px;
@@ -93,68 +101,146 @@ html {
   text-transform: uppercase;
 }
 
-.profile .section {
+.sub_profile .section {
   display: grid;
+  position: relative;
 }
 
-.profile .full-name {
+.sub_profile .full-name {
   grid-template-columns: 1fr 2fr;
 }
 
-.profile .basic-info {
+.sub_profile .basic-info {
   display: grid;
   grid-template-columns: 0.8fr 2.2fr;
   align-items: stretch;
   gap: 20px;
 }
 
-.profile .photo-box {
+.sub_profile .photo-box {
   background: #eee;
   aspect-ratio: 3.5/4.5;
   width: 100%;
   border: var(--profile-border);
 }
 
-.profile .photo-box > img {
+.sub_profile .photo-box > img {
   display: block;
   width: 100%;
   height: 100%;
 }
 
-.profile .right-info {
+.sub_profile .right-info {
   height: 100%;
   display: grid;
   grid-template-columns: 0.8fr 1.2fr;
 }
 
-.profile .traits,
-.profile .family {
+.sub_profile .type3 {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
 
-.profile .info-field {
+.sub_profile .info-field,
+.sub_profile .info {
+  border: var(--profile-border);
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   font-size: 18px;
   line-height: 35px;
 }
 
-.profile .info-field,
-.profile .info {
-  background-color: rgba(255, 255, 255, 1);
-  border: var(--profile-border);
+.sub_profile .company .info .name,
+.sub_profile .company .info .date {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.profile .info + .info-field,
-.profile .info:not(:nth-child(2)),
-.profile .section.type2 .info {
+.sub_profile .info-field,
+.sub_profile .company .info .name {
+  background-color: rgb(244, 241, 241);
+}
+
+.sub_profile .introduce .info {
+  padding: 20px;
+  align-items: flex-start;
+}
+
+.sub_profile .introduce .info .keyword {
+  display: inline-block;
+  padding: 0 20px;
+  background-color: rgba(254, 223, 226, 0.6);
+  border-radius: 20px;
+  word-break: keep-all;
+}
+
+.sub_profile .introduce .info .content {
+  padding-left: 20px;
+  text-indent: 10px;
+  word-break: keep-all;
+}
+
+.sub_profile .introduce .info .content,
+.sub_profile .introduce .info ul li + li {
+  margin-top: 20px;
+}
+
+.sub_profile .info-field.gray {
+  background-color: rgb(226, 225, 225);
+}
+
+.sub_profile .info {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.sub_profile .company .info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.sub_profile .info + .info-field,
+.sub_profile .info:not(:nth-child(2)),
+.sub_profile .section.type2 .info {
   border-top: none;
 }
 
-.profile .section:not(.type2) .info-field + .info {
+.sub_profile .section:not(.type2) .info-field + .info {
   border-left: none;
+}
+
+.sub_profile .company .info .date {
+  border-left: var(--profile-border);
+}
+
+.sub_profile .company .info > div:not(:nth-child(1), :nth-child(2)) {
+  border-top: var(--profile-border);
+}
+
+.sub_profile .sticker {
+  position: absolute;
+}
+
+.sub_profile .sticker1 {
+  width: 110px;
+  top: 0;
+  right: 0;
+  animation: imperfectRotate 3s infinite ease-in-out;
+  transform-origin: center;
+}
+
+.sub_profile .sticker2 {
+  bottom: 0;
+  right: 0;
+  transform: scale(0.5) translate(50%, 50%);
+}
+
+.sub_profile .sticker3 {
+  bottom: 0;
+  left: 0;
+  transform: scale(0.8) translate(-20%, 20%);
 }
 /* profile E: */
 
@@ -183,20 +269,54 @@ footer ul {
   .main {
     padding: 5vh 10% 0;
   }
+
+  /* profile S: */
+  .sub_profile .basic-info {
+    grid-template-columns: 1fr;
+  }
+
+  .sub_profile .photo-box {
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  .sub_profile .right-info {
+    grid-template-columns: 1fr;
+  }
+
+  .sub_profile .type3,
+  .sub_profile .full-name,
+  .sub_profile .company .info {
+    grid-template-columns: 1fr;
+  }
+
+  .sub_profile .section.full-name .info {
+    border-top: none;
+    border-left: var(--profile-border) !important;
+  }
+
+  .sub_profile .section:not(.type2) .info-field + .info {
+    border-top: none;
+    border-left: var(--profile-border);
+  }
+
+  .sub_profile .company .info > div:nth-child(2) {
+    border-top: var(--profile-border);
+  }
+
+  .sub_profile .company .info .date {
+    border-left: none;
+  }
+  /* profile E: */
 }
 
-@media (max-width: 600px) {
-  .profile .basic-info {
-    grid-template-columns: 1fr;
-  }
-
-  .profile .right-info {
-    grid-template-columns: 1fr;
-  }
-
-  .profile .traits,
-  .profile .family,
-  .profile .full-name {
-    grid-template-columns: 1fr;
-  }
+@keyframes imperfectRotate {
+  0%   { transform: rotate(0deg) translate(20%, -20%); }
+  10%  { transform: rotate(3deg) translate(20%, -20%); }
+  25%  { transform: rotate(2deg) translate(20%, -20%); }
+  40%  { transform: rotate(4deg) translate(20%, -20%); }
+  55%  { transform: rotate(1deg) translate(20%, -20%); }
+  70%  { transform: rotate(5deg) translate(20%, -20%); }
+  85%  { transform: rotate(2.5deg) translate(20%, -20%); }
+  100% { transform: rotate(0deg) translate(20%, -20%); }
 }
