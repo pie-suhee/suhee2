@@ -17,10 +17,10 @@ function Main() {
         </div>
 
         <div className="smallZip">
-          <LinkIcon link={"/"} img={"tomato"} size={"small"} txt={"project"} />
-          <LinkIcon link={"/"} img={"paperbag"} size={"small"} txt={"project"} />
-          <LinkIcon link={"/"} img={"toast"} size={"small"} txt={"project"} />
-          <LinkIcon link={"/"} img={"strawberry"} size={"small"} txt={"project"} />
+          <LinkIcon link={"/project"} img={"tomato"} size={"small"} txt={"project"} />
+          <LinkIcon link={"/project"} img={"paperbag"} size={"small"} txt={"project"} />
+          <LinkIcon link={"/project"} img={"toast"} size={"small"} txt={"project"} />
+          <LinkIcon link={"/project"} img={"strawberry"} size={"small"} txt={"project"} />
         </div>
 
         <LinkIcon link={"/profile"} img={"duck"} size={"big"} txt={"profile"} />

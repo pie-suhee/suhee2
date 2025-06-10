@@ -1,14 +1,12 @@
 import { motion } from 'framer-motion';
 
-import ThreeJsLogo from '../components/ThreeJsLogo';
-
 const zoomCircleVariants = {
   initial: { opacity: 0, scale: 0.2, borderRadius: '50%', transition: { duration: 0 }},
   animate: { opacity: 1, scale: 1, borderRadius: '0%', transition: { duration: 0.8, ease: [0.25, 0.8, 0.25, 1] }},
   exit: { opacity: 0, scale: 0.2, borderRadius: '50%', transition: { duration: 0.4, ease: [0.4, 0, 0.2, 1] }},
 };
 
-function Skill() {
+function Project() {
   return (
     <motion.div
       className="page-motion"
@@ -17,10 +15,10 @@ function Skill() {
       animate="animate"
       exit="exit"
     >
-      <div className="sub sub_skill">
+      <div className="sub sub_project">
         <div className="scroll_wrap">
-          <div className="skill">
-            <ThreeJsLogo />
+          <div className="project">
+
           </div>
         </div>
       </div>
@@ -28,4 +26,4 @@ function Skill() {
   );
 }
 
-export default Skill;
+export default Project;
