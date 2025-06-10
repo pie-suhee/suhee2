@@ -19,7 +19,7 @@ const Widget = () => {
     const updateClock = () => setTime(new Date());
 
     updateClock(); // 초기 호출
-    const interval = setInterval(updateClock, 60 * 1000); // 1분마다
+    const interval = setInterval(updateClock, 1 * 1000); // 1초마다
 
     return () => clearInterval(interval);
   }, []);

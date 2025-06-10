@@ -2,7 +2,8 @@ import { BrowserRouter as Router, Route, Routes, useLocation } from "react-route
 import { AnimatePresence } from "framer-motion";
 import Main from './pages/Main';
 import Profile from './pages/Profile';
-import History from './pages/History';
+import Timeline from './pages/Timeline';
+import Skill from './pages/Skill';
 import Footer from './components/Footer';
 
 const AppRoutes = () => {
@@ -15,7 +16,8 @@ const AppRoutes = () => {
                 <Routes location={location} key={location.pathname}>
                     <Route path="/" />
                     <Route path="/profile" element={<Profile />} />
-                    <Route path="/history" element={<History />} />
+                    <Route path="/timeline" element={<Timeline />} />
+                    <Route path="/skill" element={<Skill />} />
                 </Routes>
             </AnimatePresence>
             <Footer />

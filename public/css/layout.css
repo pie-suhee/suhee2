@@ -59,7 +59,7 @@ html,
 /* sub E: */
 
 /* page-motion S: */
-.profile-motion {
+.page-motion {
   min-width: 100%;
   min-height: 100%;
   background-color: rgba(255, 255, 255, 1);
@@ -248,8 +248,8 @@ html,
 }
 /* profile E: */
 
-/* history S: */
-.sub_history {
+/* timeline S: */
+.sub_timeline {
   background-color: #fcfcf8;
   background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAY...");
   background-size: 200px 200px;
@@ -257,28 +257,29 @@ html,
   position: relative;
 }
 
-.sub_history .scroll_wrap {
+.sub_timeline .scroll_wrap {
   width: 100%;
   height: 100vh;
   overflow-y: auto;
 }
 
-.sub_history .history {
+.sub_timeline .timeline {
   display: grid;
   grid-template-columns: 1.25fr 0.5fr 1.25fr;
 }
 
-.sub_history .history .history-item {
-  padding: 0 10px;
+.sub_timeline .timeline .timeline-item {
+  padding: 10px;
   line-height: 1.5;
   word-break: keep-all;
 }
 
-.sub_history .history .history-item .red {
+.sub_timeline .timeline .timeline-item .red {
   color: rgba(237, 34, 36, 1);
+  font-weight: 800;
 }
 
-.sub_history .history .history-item.line {
+.sub_timeline .timeline .timeline-item.line {
   padding: 50px 10px;
   background-color: rgba(237, 34, 36, 1);
   font-size: clamp(30px, 8vw, 100px);
@@ -287,31 +288,31 @@ html,
   line-height: 1;
 }
 
-.sub_history .history .history-item.left {
+.sub_timeline .timeline .timeline-item.left {
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
 
-.sub_history .history .history-item.right {
+.sub_timeline .timeline .timeline-item.right {
   display: flex;
   justify-content: flex-end;
   align-items: center;
   text-align: right;
 }
 
-.sub_history .history .history-item.title {
+.sub_timeline .timeline .timeline-item.title {
   padding: 10vh 0 10vh 20px;
   font-size: clamp(24px, 7vw, 100px);
   font-weight: 500;
   line-height: 1;
 }
 
-.sub_history .history .history-item > ul > li + li {
+.sub_timeline .timeline .timeline-item .list_box > li + li {
   margin-top: 10px;
 }
 
-.sub_history .history .history-item ul li .date {
+.sub_timeline .timeline .timeline-item ul li .date {
   display: inline-block;
   position: relative;
   font-family: "Pretendard";
@@ -319,28 +320,58 @@ html,
   font-weight: 500;
 }
 
-.sub_history .history .history-item ul li .date::before {
+.sub_timeline .timeline .timeline-item ul li .date::before {
   content: '';
   position: absolute;
   left: 0;
   bottom: 0.1em;
   width: 0;
   height: 50%;
-  background: #fff9aa;
+  background: rgba(244, 196, 201, 0.8);
   z-index: -1;
   animation: 1s line 0.5s cubic-bezier(0, 0, 0.28, 1.05) forwards;
   transform-origin: left;
 }
 
-.sub_history .history .history-item ul li .content {
+.sub_timeline .timeline .timeline-item ul li .content {
   margin-top: 5px;
   font-weight: 600;
 }
 
-.sub_history .history .history-item:last-child {
+.sub_timeline .timeline .timeline-item:last-child {
   height: 180px;
 }
-/* history E: */
+
+.sub_timeline .timeline .timeline-item.img {
+  position: relative;
+}
+
+.sub_timeline .timeline .timeline-item.img img {
+  max-width: 350px;
+  position: absolute;
+  opacity: 0.7;
+}
+
+.sub_timeline .timeline .timeline-item.img.pc img {
+  right: 3vw;
+  transform: translateX(100%);
+}
+
+.sub_timeline .timeline .timeline-item.img.dream img {
+  left: 10vw;
+  transform: translateX(-100%) rotate(-25deg);
+}
+
+.sub_timeline .timeline .timeline-item.img.strawberry img {
+  right: 8vw;
+  transform: translateX(100%) rotate(10deg);
+}
+
+.sub_timeline .timeline .timeline-item.img.softserve img {
+  left: 14vw;
+  transform: translateX(-100%) rotate(-30deg);
+}
+/* timeline E: */
 
 /* footer S: */
 footer {
@@ -407,11 +438,31 @@ footer ul {
   }
   /* profile E: */
 
-  /* history S: */
-  .sub_history .history .history-item ul li .date {
+  /* timeline S: */
+  .sub_timeline .timeline .timeline-item ul li .date {
     font-size: 18px;
   }
-  /* history E: */
+
+  .sub_timeline .timeline .timeline-item.img img {
+    max-width: 30vw;
+  }
+
+  .sub_timeline .timeline .timeline-item.img.pc img {
+    right: 2vw;
+  }
+
+  .sub_timeline .timeline .timeline-item.img.dream img {
+    left: 7vw;
+  }
+
+  .sub_timeline .timeline .timeline-item.img.strawberry img {
+    right: 7vw;
+  }
+
+  .sub_timeline .timeline .timeline-item.img.softserve img {
+    left: 9vw;
+  }
+  /* timeline E: */
 }
 
 @keyframes imperfectRotate {

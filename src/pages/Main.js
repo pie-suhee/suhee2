@@ -7,13 +7,13 @@ function Main() {
   return (
     <main className="main">
       <div className="iconLayout">
-        <LinkIcon link={"/history"} img={"lp"} size={"big"} txt={"history"} />
+        <LinkIcon link={"/timeline"} img={"lp"} size={"big"} txt={"timeline"} />
 
         <div className="smallZip">
-          <LinkIcon link={"/"} img={"star"} size={"small"} txt={"skill"} />
-          <LinkIcon link={"/"} img={"moon"} size={"small"} txt={"skill"} />
-          <LinkIcon link={"/"} img={"clover"} size={"small"} txt={"skill"} />
-          <LinkIcon link={"/"} img={"butterfly"} size={"small"} txt={"skill"} />
+          <LinkIcon link={"/skill"} img={"star"} size={"small"} txt={"skill"} />
+          <LinkIcon link={"/skill"} img={"moon"} size={"small"} txt={"skill"} />
+          <LinkIcon link={"/skill"} img={"clover"} size={"small"} txt={"skill"} />
+          <LinkIcon link={"/skill"} img={"butterfly"} size={"small"} txt={"skill"} />
         </div>
 
         <div className="smallZip">

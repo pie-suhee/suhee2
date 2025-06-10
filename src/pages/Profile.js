@@ -9,7 +9,7 @@ const zoomCircleVariants = {
 function Profile() {
   return (
     <motion.div
-      className="profile-motion"
+      className="page-motion"
       variants={zoomCircleVariants}
       initial="initial"
       animate="animate"
