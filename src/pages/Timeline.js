@@ -1,17 +1,17 @@
 import { motion } from 'framer-motion';
 import FadeUpSection from '../components/FadeUpSection';
 
-const zoomCircleVariants = {
-  initial: { opacity: 0, scale: 0.2, borderRadius: '50%', transition: { duration: 0 }},
-  animate: { opacity: 1, scale: 1, borderRadius: '0%', transition: { duration: 0.8, ease: [0.25, 0.8, 0.25, 1] }},
-  exit: { opacity: 0, scale: 0.2, borderRadius: '50%', transition: { duration: 0.4, ease: [0.4, 0, 0.2, 1] }},
+const zoomVariants = {
+  initial: { opacity: 0, scale: 0.2, transition: { duration: 0 }},
+  animate: { opacity: 1, scale: 1, transition: { duration: 0.8, ease: [0.25, 0.8, 0.25, 1] }},
+  exit: { opacity: 0, scale: 0.2, transition: { duration: 0.4, ease: [0.4, 0, 0.2, 1] }},
 };
 
 function Timeline() {
   return (
     <motion.div
       className="page-motion"
-      variants={zoomCircleVariants}
+      variants={zoomVariants}
       initial="initial"
       animate="animate"
       exit="exit"
