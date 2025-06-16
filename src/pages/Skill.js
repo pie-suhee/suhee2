@@ -9,6 +9,7 @@ import { motion } from 'framer-motion';
 import ThreeHtmlLogo from '../components/ThreeHtmlLogo'
 import ThreeCssLogo from '../components/ThreeCssLogo'
 import ThreeJsLogo from '../components/ThreeJsLogo'
+import '../css/components.css';
 
 const zoomVariants = {
   initial: { opacity: 0, scale: 0.2, transition: { duration: 0 }},
@@ -41,31 +42,49 @@ function Skill() {
             >
               <SwiperSlide>
                 <div className="swiper_content">
-                  <div className="title">
-                    HTML5
+                  <div className="top_box">
+                    <div className="title">
+                      HTML5
+                    </div>
+                    <div className="logo_icon">
+                      <ThreeHtmlLogo />
+                    </div>
                   </div>
-                  <div className="logo_icon">
-                    <ThreeHtmlLogo />
-                  </div>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className="swiper_content">
-                  <div className="title">
-                    CSS3
-                  </div>
-                  <div className="logo_icon">
-                    <ThreeCssLogo />
+
+                  <div className="skill_content">
+
                   </div>
                 </div>
               </SwiperSlide>
               <SwiperSlide>
                 <div className="swiper_content">
-                  <div className="title">
-                    JAVASCRIPT
+                  <div className="top_box">
+                    <div className="title">
+                      CSS3
+                    </div>
+                    <div className="logo_icon">
+                      <ThreeCssLogo />
+                    </div>
                   </div>
-                  <div className="logo_icon">
-                    <ThreeJsLogo />
+
+                  <div className="skill_content">
+
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="swiper_content">
+                  <div className="top_box">
+                    <div className="title">
+                      JAVASCRIPT
+                    </div>
+                    <div className="logo_icon">
+                      <ThreeJsLogo />
+                    </div>
+                  </div>
+
+                  <div className="skill_content">
+
                   </div>
                 </div>
               </SwiperSlide>
