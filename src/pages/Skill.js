@@ -32,7 +32,10 @@ function Skill() {
             <Swiper
               slidesPerView={1}
               loop={true}
-              navigation={true}
+              navigation={{
+                prevEl: '.custom-prev',
+                nextEl: '.custom-next'
+              }}
               modules={[Navigation]}
               className="mySwiper"
             >
@@ -67,6 +70,14 @@ function Skill() {
                 </div>
               </SwiperSlide>
             </Swiper>
+
+            <div className="custom-button custom-prev">
+              <img src={require(`../assets/img/skill/prevBtn.png`)} alt="이전 버튼" />
+            </div>
+
+            <div className="custom-button custom-next">
+              <img src={require(`../assets/img/skill/nextBtn.png`)} alt="다음 버튼" />
+            </div>
           </div>
         </div>
       </div>
