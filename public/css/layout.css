@@ -381,8 +381,21 @@ html,
   -webkit-backdrop-filter: blur(40px);
 }
 
-.sub_skill {
+.sub_skill,
+.sub_skill .skill {
   position: relative;
+}
+
+.sub_skill .skill .alarm_txt {
+  width: 100%;
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  word-break: break-all;
+  font-size: min(3.5vw, 16px);
+  line-height: 1.5;
 }
 
 .sub_skill .swiper {
@@ -396,7 +409,7 @@ html,
   flex-direction: column;
   width: 100%;
   height: 100%;
-  padding: 100px 0 180px;
+  padding: 100px 0 130px;
   position: relative;
 }
 
@@ -474,6 +487,11 @@ html,
   line-height: 1.5;
 }
 
+.sub_skill .skill_content .scroll_wrap {
+  width: 100%;
+  height: 100%;
+}
+
 .sub_skill .skill_content .heart_box {
   margin-top: 3vh;
   display: flex;
@@ -492,32 +510,30 @@ html,
   height: 100%;
 }
 
-.sub_skill .skill_content::before {
-  content: "";
-  width: 100%;
-  height: calc(100% + 180px);
-  background-color: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(40px);
-  -webkit-backdrop-filter: blur(40px);
-  position: absolute;
-  bottom: -180px;
-  left: 50%;
-  transform: translateX(-50%);
+.sub_skill .skill_content .project_box {
+  width: 80%;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 6vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .sub_skill .skill_content::after {
   content: "";
   width: 100%;
-  height: min(15vh, 150px);
+  height: calc(100% + 180px + min(15vh, 150px));
   background-color: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(40px);
   -webkit-backdrop-filter: blur(40px);
-  border-top-left-radius: 100% 100%;
-  border-top-right-radius: 100% 100%;
+  border-top-left-radius: 200px;
+  border-top-right-radius: 200px;
   position: absolute;
-  top: 0;
+  bottom: -180px;
   left: 50%;
-  transform: translate(-50%, -99.9%);
+  transform: translateX(-50%);
 }
 /* skill E: */
 

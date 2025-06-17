@@ -88,6 +88,7 @@ const ThreeHtmlLogo = () => {
         animate();
 
         return () => {
+            renderer.dispose();
             if (mountRef.current) {
                 mountRef.current.innerHTML = '';
             }

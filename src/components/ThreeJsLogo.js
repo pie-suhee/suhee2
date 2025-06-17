@@ -75,6 +75,7 @@ const ThreeJsLogo = () => {
         });
 
         return () => {
+            renderer.dispose();
             if (mountRef.current) {
                 mountRef.current.innerHTML = '';
             }

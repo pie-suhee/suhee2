@@ -83,6 +83,7 @@ const ThreeHeart = ({ color1, color2 }) => {
         animate();
 
         return () => {
+            renderer.dispose();
             if (mountRef.current) {
                 mountRef.current.innerHTML = '';
             }

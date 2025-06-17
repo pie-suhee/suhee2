@@ -90,6 +90,7 @@ const ThreeCssLogo = () => {
         animate();
 
         return () => {
+            renderer.dispose();
             if (mountRef.current) {
                 mountRef.current.innerHTML = '';
             }
