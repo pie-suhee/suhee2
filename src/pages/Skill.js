@@ -64,23 +64,23 @@ function Skill() {
                   </div>
 
                   <div className="skill_content">
-                    <div className="scroll_wrap">
-                      <div className="explane">
-                        ai dt 교과서 작업 중<br />
-                        웹 표준 및 접근성을 반영한<br />
-                        프로젝트 수행 경험 보유
-                      </div>
+                    <div className="explane">
+                      ai dt 교과서 작업 중<br />
+                      웹 표준 및 접근성을 반영한<br />
+                      프로젝트 수행 경험 보유
+                    </div>
 
-                      <div className="heart_box">
-                        <ThreeHeart color1="DC143C" color2="DC143C" />
-                        <ThreeHeart color1="DC143C" color2="DC143C" />
-                        <ThreeHeart color1="DC143C" color2="DC143C" />
-                        <ThreeHeart color1="DC143C" color2="DC143C" />
-                        <ThreeHeart color1="C3C3C3" color2="C3C3C3" />
-                      </div>
+                    <div className="heart_box">
+                      <ThreeHeart color1="DC143C" color2="DC143C" />
+                      <ThreeHeart color1="DC143C" color2="DC143C" />
+                      <ThreeHeart color1="DC143C" color2="DC143C" />
+                      <ThreeHeart color1="DC143C" color2="DC143C" />
+                      <ThreeHeart color1="C3C3C3" color2="C3C3C3" />
+                    </div>
 
-                      <div className="project_box">
-                      </div>
+                    <div className="go_project">
+                      <img src={require(`../assets/img/skill/door.png`)} alt="문" />
+                      <div className="go_project_title satisfy">project</div>
                     </div>
                   </div>
                 </div>
@@ -99,20 +99,18 @@ function Skill() {
                   </div>
 
                   <div className="skill_content">
-                    <div className="scroll_wrap">
-                      <div className="explane">
-                        모바일 쇼핑몰 앱 메인 작업 중<br />
-                        tailwind.css를 사용 경험 보유<br />
-                        sass 중 scss 사용 가능
-                      </div>
+                    <div className="explane">
+                      모바일 쇼핑몰 앱 메인 작업 중<br />
+                      tailwind.css를 사용 경험 보유<br />
+                      sass 중 scss 사용 가능
+                    </div>
 
-                      <div className="heart_box">
-                        <ThreeHeart color1="DC143C" color2="DC143C" />
-                        <ThreeHeart color1="DC143C" color2="DC143C" />
-                        <ThreeHeart color1="DC143C" color2="DC143C" />
-                        <ThreeHeart color1="DC143C" color2="C3C3C3" />
-                        <ThreeHeart color1="C3C3C3" color2="C3C3C3" />
-                      </div>
+                    <div className="heart_box">
+                      <ThreeHeart color1="DC143C" color2="DC143C" />
+                      <ThreeHeart color1="DC143C" color2="DC143C" />
+                      <ThreeHeart color1="DC143C" color2="DC143C" />
+                      <ThreeHeart color1="DC143C" color2="C3C3C3" />
+                      <ThreeHeart color1="C3C3C3" color2="C3C3C3" />
                     </div>
                   </div>
                 </div>
@@ -131,20 +129,18 @@ function Skill() {
                   </div>
 
                   <div className="skill_content">
-                    <div className="scroll_wrap">
-                      <div className="explane">
-                        기본 문법과 주요 개념에 익숙하며,<br />
-                        실무에서 활용 가능한 수준의<br />
-                        구현 경험 보유
-                      </div>
+                    <div className="explane">
+                      기본 문법과 주요 개념에 익숙하며,<br />
+                      실무에서 활용 가능한 수준의<br />
+                      구현 경험 보유
+                    </div>
 
-                      <div className="heart_box">
-                        <ThreeHeart color1="DC143C" color2="DC143C" />
-                        <ThreeHeart color1="DC143C" color2="DC143C" />
-                        <ThreeHeart color1="DC143C" color2="DC143C" />
-                        <ThreeHeart color1="C3C3C3" color2="C3C3C3" />
-                        <ThreeHeart color1="C3C3C3" color2="C3C3C3" />
-                      </div>
+                    <div className="heart_box">
+                      <ThreeHeart color1="DC143C" color2="DC143C" />
+                      <ThreeHeart color1="DC143C" color2="DC143C" />
+                      <ThreeHeart color1="DC143C" color2="DC143C" />
+                      <ThreeHeart color1="C3C3C3" color2="C3C3C3" />
+                      <ThreeHeart color1="C3C3C3" color2="C3C3C3" />
                     </div>
                   </div>
                 </div>
