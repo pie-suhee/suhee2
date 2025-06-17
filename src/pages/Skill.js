@@ -6,10 +6,12 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 import ThreeHtmlLogo from '../components/ThreeHtmlLogo'
 import ThreeCssLogo from '../components/ThreeCssLogo'
 import ThreeJsLogo from '../components/ThreeJsLogo'
+import ThreeReactLogo from '../components/ThreeReactLogo'
 import ThreeHeart from '../components/ThreeHeart'
 import '../css/components.css';
 
@@ -79,8 +81,10 @@ function Skill() {
                     </div>
 
                     <div className="go_project">
-                      <img src={require(`../assets/img/skill/door.png`)} alt="문" />
-                      <div className="go_project_title satisfy">project</div>
+                      <Link to="/project">
+                        <img src={require(`../assets/img/skill/door.png`)} alt="문" />
+                        <div className="go_project_title satisfy">project</div>
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -112,6 +116,13 @@ function Skill() {
                       <ThreeHeart color1="DC143C" color2="C3C3C3" />
                       <ThreeHeart color1="C3C3C3" color2="C3C3C3" />
                     </div>
+
+                    <div className="go_project">
+                      <Link to="/project">
+                        <img src={require(`../assets/img/skill/door.png`)} alt="문" />
+                        <div className="go_project_title satisfy">project</div>
+                      </Link>
+                    </div>
                   </div>
                 </div>
               )}
@@ -141,6 +152,51 @@ function Skill() {
                       <ThreeHeart color1="DC143C" color2="DC143C" />
                       <ThreeHeart color1="C3C3C3" color2="C3C3C3" />
                       <ThreeHeart color1="C3C3C3" color2="C3C3C3" />
+                    </div>
+
+                    <div className="go_project">
+                      <Link to="/project">
+                        <img src={require(`../assets/img/skill/door.png`)} alt="문" />
+                        <div className="go_project_title satisfy">project</div>
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              )}
+            </SwiperSlide>
+            <SwiperSlide>
+              {activeIndex === 3 && (
+                <div className="swiper_content">
+                  <div className="top_box">
+                    <div className="title">
+                      React
+                    </div>
+                    <div className="logo_icon">
+                      <ThreeReactLogo />
+                    </div>
+                  </div>
+
+                  <div className="skill_content">
+                    <div className="explane">
+                      React 기반 UI 구현과<br />
+                      컴포넌트 구성에 익숙하며,<br />
+                      Props 중심의 데이터 전달과<br />
+                      구조 설계 경험 보유
+                    </div>
+
+                    <div className="heart_box">
+                      <ThreeHeart color1="DC143C" color2="DC143C" />
+                      <ThreeHeart color1="DC143C" color2="DC143C" />
+                      <ThreeHeart color1="C3C3C3" color2="C3C3C3" />
+                      <ThreeHeart color1="C3C3C3" color2="C3C3C3" />
+                      <ThreeHeart color1="C3C3C3" color2="C3C3C3" />
+                    </div>
+
+                    <div className="go_project">
+                      <Link to="/project">
+                        <img src={require(`../assets/img/skill/door.png`)} alt="문" />
+                        <div className="go_project_title satisfy">project</div>
+                      </Link>
                     </div>
                   </div>
                 </div>

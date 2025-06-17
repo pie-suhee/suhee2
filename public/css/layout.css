@@ -438,7 +438,7 @@ html,
 .sub_skill .logo_icon {
   display: inline-block;
   width: 50%;
-  max-width: 250px;
+  max-width: 200px;
   margin-top: min(10vh, 100px);
   position: relative;
   left: 50%;
@@ -448,7 +448,7 @@ html,
 
 .sub_skill .logo_icon canvas {
   width: 100%;
-  max-width: 250px;
+  max-width: 200px;
   aspect-ratio: 1/1;
 }
 
@@ -515,12 +515,17 @@ html,
 }
 
 .sub_skill .skill_content .go_project {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   flex-grow: 1;
   height: 100%;
   min-height: 0;
+}
+
+.sub_skill .skill_content .go_project a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  position: relative;
 }
 
 .sub_skill .skill_content .go_project img {
@@ -529,7 +534,7 @@ html,
 }
 
 .sub_skill .skill_content .go_project_title {
-  font-size: min(8vw, 50px);
+  font-size: min(8vw, 100px);
   color: rgba(0, 0, 0, 0.5);
   position: absolute;
   top: 50%;
