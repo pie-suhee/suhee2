@@ -1,0 +1,34 @@
+[
+  {
+    "id": "1",
+    "title": "Toggle side nav",
+    "desc": "토글 버튼으로 사이드 내비게이션을 제어하는 인터랙션 UI를 구현했습니다.",
+    "tags": ["html", "css", "javascript"],
+    "img": "toggleSideNavBg.png",
+    "url": "https://pie-suhee.github.io/portfolio/boot/1_toggle-side-nav/"
+  },
+  {
+    "id": "2",
+    "title": "Analog clock",
+    "desc": "SVG와 JavaScript를 활용해 시간에 따라 배경이 변하는 인터랜티브 아날로그 시계를 구현했습니다.",
+    "tags": ["html", "css", "javascript"],
+    "img": "analogClockBg.png",
+    "url": "https://pie-suhee.github.io/portfolio/boot/2_analog-clock/"
+  },
+  {
+    "id": "3",
+    "title": "Star rating",
+    "desc": "마우스 인터랙션에 따라 별점을 선택할 수 있는 Star Rating UI를 구현했습니다.",
+    "tags": ["html", "css", "javascript"],
+    "img": "starRatingBg.png",
+    "url": "https://pie-suhee.github.io/portfolio/boot/3_star-rating/"
+  },
+  {
+    "id": "4",
+    "title": "Date picker",
+    "desc": "날짜 선택과 달력 탐색이 가능한 Calendar & Datepicker UI를 구현했습니다.",
+    "tags": ["html", "css", "javascript"],
+    "img": "datePickerBg.png",
+    "url": "https://pie-suhee.github.io/portfolio/boot/4_calendar&datepicker/"
+  }
+]

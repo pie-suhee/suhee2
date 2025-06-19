@@ -5,7 +5,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+@import url('https://fonts.cdnfonts.com/css/alagambe');
 
 html,
 .inter {
@@ -20,8 +20,8 @@ html,
   font-family: "Pretendard";
 }
 
-.satisfy {
-  font-family: 'Satisfy', cursive;
+.alagambe {
+  font-family: 'alagambe', sans-serif;
 }
 /* 글씨체 E: */
 
@@ -561,6 +561,132 @@ html,
 /* project S: */
 .sub_project {
   background-color: rgba(255, 255, 255, 1);
+  background-image: 
+    linear-gradient(to right, rgba(0, 0, 0, 0.1) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
+  background-size: 30px 30px;
+}
+
+.sub_project .scroll_wrap {
+  width: 100%;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.sub_project .project {
+  min-height: 100vh;
+  padding: 100px 5% 180px;
+}
+
+.sub_project .project_title {
+  text-align: center;
+  font-size: min(15vw, 90px);
+}
+
+.sub_project .project_list {
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: flex-start;
+  gap: 12px;
+}
+
+.sub_project .project_list > li {
+  width: calc((100% - 8 * 12px) / 9);
+  aspect-ratio: 1/3;
+  /* border: 1px solid red; */
+}
+
+.sub_project .project_list > li a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: max(1vh, 20px);
+}
+
+.sub_project .project_list > li .img_box {
+  width: 100%;
+  aspect-ratio: 1/2;
+  background-color: rgba(244, 67, 54, 0.25);
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.sub_project .project_list > li .img_box svg {
+  width: 100%;
+  height: 100%;
+}
+
+.sub_project .project_list > li .img_box svg .imgPattern image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.sub_project .project_list > li .img_box svg .number-mask path {
+  transform: translate(0, 0) scale(1.3);
+}
+
+.sub_project .project_list > li .text_box {
+  display: flex;
+  flex-direction: column;
+  gap: max(1vh, 20px);
+  flex-grow: 1;
+  min-height: 0;
+  padding: 0 10px;
+}
+
+.sub_project .project_list > li .text_box .title {
+  flex-shrink: 0;
+  text-align: center;
+  font-size: min(10vw, 20px);
+  font-weight: 600;
+}
+
+.sub_project .project_list > li .text_box .tag_box {
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  flex-shrink: 0;
+}
+
+.sub_project .project_list > li .text_box .tag_box .tag {
+  padding: 0 8px;
+  border-radius: 20px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.sub_project .project_list > li .text_box .tag_box .tag.html {
+  color: rgba(255, 87, 34, 1);
+  border: 1px solid rgba(255, 87, 34, 1);
+}
+
+.sub_project .project_list > li .text_box .tag_box .tag.css {
+  color: rgba(16, 115, 187, 1);
+  border: 1px solid rgba(16, 115, 187, 1);
+}
+
+.sub_project .project_list > li .text_box .tag_box .tag.javascript {
+  color: rgba(255, 191, 0, 1);
+  border: 1px solid rgba(255, 191, 0, 1);
+}
+
+.sub_project .project_list > li .text_box .detail {
+  flex-grow: 1;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.sub_project .project_list > li .text_box .detail span {
+  display: inline-block;
+  text-align: center;
+  line-height: 1.4;
+  word-break: keep-all;
 }
 /* project E: */
 
@@ -603,6 +729,20 @@ footer ul {
     left: 14vw;
   }
   /* timeline E: */
+
+  /* project S: */
+  .sub_project .project_list > li {
+    width: calc((100% - 5 * 12px) / 6);
+  }
+  /* project E: */
+}
+
+@media all and (max-width: 1200px) {
+  /* project S: */
+  .sub_project .project_list > li {
+    width: calc((100% - 3 * 12px) / 4);
+  }
+  /* project E: */
 }
 
 @media all and (max-width: 900px) {
@@ -674,6 +814,25 @@ footer ul {
     left: 9vw;
   }
   /* timeline E: */
+
+  /* project S: */
+  .sub_project .project_list > li {
+    width: calc((100% - 2 * 12px) / 3);
+  }
+  /* project E: */
+}
+
+@media all and (max-width: 500px) {
+  /* project S: */
+  .sub_project .project_list > li {
+    width: 100%;
+    aspect-ratio: 1/1.5;
+  }
+
+  .sub_project .project_list > li .img_box {
+    aspect-ratio: 1/1;
+  }
+  /* project E: */
 }
 
 @media (max-height: 844px) {
