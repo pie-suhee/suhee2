@@ -1,5 +1,4 @@
 import * as THREE from 'three';
-import { RoundedBoxGeometry } from 'three-stdlib';
 import { useEffect, useRef } from 'react';
 
 const ThreeReactLogo = () => {
@@ -9,7 +8,7 @@ const ThreeReactLogo = () => {
         // 기본 세팅
         const scene = new THREE.Scene();
         const camera = new THREE.PerspectiveCamera(45, 1, 0.1, 1000);
-        camera.position.z = 50;
+        camera.position.z = 40;
 
         const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
         // renderer.setSize(200, 200);
@@ -22,23 +21,13 @@ const ThreeReactLogo = () => {
         const directional = new THREE.DirectionalLight(0xffffff, 1);
         directional.position.set(10, 10, 100);
         scene.add(directional);
-
-        // 하늘색 큐브 (Rounded 처리 대신 bevel로 표현)
-        const cubeGeometry = new RoundedBoxGeometry(30, 30, 8, 10, 3);
-        const cubeMaterial = new THREE.MeshStandardMaterial({
-            color: 0x61dafb,      // 하늘색
-            metalness: 0,       // 금속성: 0~1 (0: 플라스틱, 1: 금속)
-            roughness: 0.4        // 표면 거칠기: 0~1 (0: 매끈, 1: 거칠)
-        });
-        const cube = new THREE.Mesh(cubeGeometry, cubeMaterial);
-        scene.add(cube);
-
+        
         // 1. Shape 정의
         const logoGroup = new THREE.Group();
 
         const nucleus = new THREE.Mesh(
             new THREE.CylinderGeometry(3, 3, 1.5, 32),
-            new THREE.MeshStandardMaterial({ color: 0xffffff })
+            new THREE.MeshStandardMaterial({ color: 0x61dafb })
         );
 
         nucleus.rotation.x = Math.PI / 2;
@@ -54,7 +43,7 @@ const ThreeReactLogo = () => {
                 true
             );
             const tubeGeometry = new THREE.TubeGeometry(curvePath, 100, 0.8, 8, true);
-            const tubeMaterial = new THREE.MeshStandardMaterial({ color: 0xffffff });
+            const tubeMaterial = new THREE.MeshStandardMaterial({ color: 0x61dafb });
             const tube = new THREE.Mesh(tubeGeometry, tubeMaterial);
 
             tube.rotation.z = rotationZ;
@@ -74,9 +63,8 @@ const ThreeReactLogo = () => {
 
         const animate = () => {
             angle += 0.01;
-            cube.rotation.x = Math.sin(angle) * 0.2; // 앞뒤로 기울임
-            cube.rotation.y = Math.cos(angle) * 0.3;
-            logoGroup.rotation.copy(cube.rotation);
+            logoGroup.rotation.x = Math.sin(angle) * 0.2; // 앞뒤로 기울임
+            logoGroup.rotation.y = Math.cos(angle) * 0.3;
 
             renderer.render(scene, camera);
             requestAnimationFrame(animate);
@@ -91,7 +79,7 @@ const ThreeReactLogo = () => {
         };
     }, []);
 
-    return <div ref={mountRef} />;
+    return <div className="skill-icon" ref={mountRef} />;
 };
 
 export default ThreeReactLogo;

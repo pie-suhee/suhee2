@@ -82,7 +82,7 @@ const ThreeJsLogo = () => {
         };
     }, []);
 
-    return <div ref={mountRef} />;
+    return <div className="skill-icon" ref={mountRef} />;
 };
 
 export default ThreeJsLogo;

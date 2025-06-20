@@ -56,167 +56,94 @@ function Skill() {
             className="mySwiper"
           >
             <SwiperSlide>
-              <div className="swiper_content">
-                <div className="top_box">
-                  <div className="title">
-                    HTML5
-                  </div>
-                  <div className="logo_icon">
-                    {activeIndex === 0 && (
-                      <ThreeHtmlLogo />
-                    )}
-                  </div>
+              <div className="skill-card">
+                {activeIndex === 0 && (
+                  <ThreeHtmlLogo />
+                )}
+                <div className="name">HTML</div>
+                <div className="detail">
+                  AI·DT 교과서 프로젝트 참여,<br />
+                  웹 표준 및 접근성 가이드라인을 반영한 실무 경험 보유
                 </div>
-
-                <div className="skill_content">
-                  <div className="explane">
-                    ai dt 교과서 작업 중<br />
-                    웹 표준 및 접근성을 반영한<br />
-                    프로젝트 수행 경험 보유
-                  </div>
-
-                  <div className="heart_box">
-                    {activeIndex === 0 && (
-                      [...Array(5)].map((_, i) => (
-                        <ThreeHeart
-                          key={i}
-                          color1={i < heartCounts[0][0] ? "DC143C" : "C3C3C3"}
-                          color2={i < heartCounts[0][1] ? "DC143C" : "C3C3C3"}
-                        />
-                      ))
-                    )}
-                  </div>
-
-                  <div className="go_project">
-                    <Link to="/project">
-                      <img src={require(`../assets/img/skill/door.png`)} alt="문" />
-                      <div className="go_project_title alagambe">project</div>
-                    </Link>
-                  </div>
+                <div className="heart-box">
+                  {activeIndex === 0 && (
+                    [...Array(5)].map((_, i) => (
+                      <ThreeHeart
+                        key={i}
+                        color1={i < heartCounts[0][0] ? "DC143C" : "C3C3C3"}
+                        color2={i < heartCounts[0][1] ? "DC143C" : "C3C3C3"}
+                      />
+                    ))
+                  )}
                 </div>
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="swiper_content">
-                <div className="top_box">
-                  <div className="title">
-                    CSS3
-                  </div>
-                  <div className="logo_icon">
-                    {activeIndex === 1 && (
-                      <ThreeCssLogo />
-                    )}
-                  </div>
+              <div className="skill-card">
+                {activeIndex === 1 && (
+                  <ThreeCssLogo />
+                )}
+                <div className="name">CSS3</div>
+                <div className="detail">
+                  React 모바일 커머스 앱 메인 화면 개발 참여<br />
+                  Tailwind CSS 및 Sass(SCSS)로 스타일링 구조화
                 </div>
-
-                <div className="skill_content">
-                  <div className="explane">
-                    모바일 쇼핑몰 앱 메인 작업 중<br />
-                    tailwind.css를 사용 경험 보유<br />
-                    sass 중 scss 사용 가능
-                  </div>
-
-                  <div className="heart_box">
-                    {activeIndex === 1 && (
-                      [...Array(5)].map((_, i) => (
-                        <ThreeHeart
-                          key={i}
-                          color1={i < heartCounts[1][0] ? "DC143C" : "C3C3C3"}
-                          color2={i < heartCounts[1][1] ? "DC143C" : "C3C3C3"}
-                        />
-                      ))
-                    )}
-                  </div>
-
-                  <div className="go_project">
-                    <Link to="/project">
-                      <img src={require(`../assets/img/skill/door.png`)} alt="문" />
-                      <div className="go_project_title alagambe">project</div>
-                    </Link>
-                  </div>
+                <div className="heart-box">
+                  {activeIndex === 1 && (
+                    [...Array(5)].map((_, i) => (
+                      <ThreeHeart
+                        key={i}
+                        color1={i < heartCounts[1][0] ? "DC143C" : "C3C3C3"}
+                        color2={i < heartCounts[1][1] ? "DC143C" : "C3C3C3"}
+                      />
+                    ))
+                  )}
                 </div>
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="swiper_content">
-                <div className="top_box">
-                  <div className="title">
-                    JAVASCRIPT
-                  </div>
-                  <div className="logo_icon">
-                    {activeIndex === 2 && (
-                      < ThreeJsLogo />
-                    )}
-                  </div>
+              <div className="skill-card">
+                {activeIndex === 2 && (
+                  <ThreeJsLogo />
+                )}
+                <div className="name">JAVASCRIPT</div>
+                <div className="detail">
+                  JavaScript 기본 문법과 핵심 개념에 익숙하며<br />
+                  실무 적용이 가능한 수준의 구현 경험 보유
                 </div>
-
-                <div className="skill_content">
-                  <div className="explane">
-                    기본 문법과 주요 개념에 익숙하며,<br />
-                    실무에서 활용 가능한 수준의<br />
-                    구현 경험 보유
-                  </div>
-
-                  <div className="heart_box">
-                    {activeIndex === 2 && (
-                      [...Array(5)].map((_, i) => (
-                        <ThreeHeart
-                          key={i}
-                          color1={i < heartCounts[2][0] ? "DC143C" : "C3C3C3"}
-                          color2={i < heartCounts[2][1] ? "DC143C" : "C3C3C3"}
-                        />
-                      ))
-                    )}
-                  </div>
-
-                  <div className="go_project">
-                    <Link to="/project">
-                      <img src={require(`../assets/img/skill/door.png`)} alt="문" />
-                      <div className="go_project_title alagambe">project</div>
-                    </Link>
-                  </div>
+                <div className="heart-box">
+                  {activeIndex === 2 && (
+                    [...Array(5)].map((_, i) => (
+                      <ThreeHeart
+                        key={i}
+                        color1={i < heartCounts[2][0] ? "DC143C" : "C3C3C3"}
+                        color2={i < heartCounts[2][1] ? "DC143C" : "C3C3C3"}
+                      />
+                    ))
+                  )}
                 </div>
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="swiper_content">
-                <div className="top_box">
-                  <div className="title">
-                    React
-                  </div>
-                  <div className="logo_icon">
-                    {activeIndex === 3 && (
-                      <ThreeReactLogo />
-                    )}
-                  </div>
+              <div className="skill-card">
+                {activeIndex === 3 && (
+                  <ThreeReactLogo />
+                )}
+                <div className="name">REACT</div>
+                <div className="detail">
+                  React 기반 UI 구현 및 컴포넌트 구성에 익숙하며<br />
+                  Props를 활용한 데이터 흐름 및 구조 설계 경험 보유
                 </div>
-
-                <div className="skill_content">
-                  <div className="explane">
-                    React 기반 UI 구현과<br />
-                    컴포넌트 구성에 익숙하며,<br />
-                    Props 중심의 데이터 전달과<br />
-                    구조 설계 경험 보유
-                  </div>
-
-                  <div className="heart_box">
-                    {activeIndex === 3 && (
-                      [...Array(5)].map((_, i) => (
-                        <ThreeHeart
-                          key={i}
-                          color1={i < heartCounts[3][0] ? "DC143C" : "C3C3C3"}
-                          color2={i < heartCounts[3][1] ? "DC143C" : "C3C3C3"}
-                        />
-                      ))
-                    )}
-                  </div>
-
-                  <div className="go_project">
-                    <Link to="/project">
-                      <img src={require(`../assets/img/skill/door.png`)} alt="문" />
-                      <div className="go_project_title alagambe">project</div>
-                    </Link>
-                  </div>
+                <div className="heart-box">
+                  {activeIndex === 3 && (
+                    [...Array(5)].map((_, i) => (
+                      <ThreeHeart
+                        key={i}
+                        color1={i < heartCounts[3][0] ? "DC143C" : "C3C3C3"}
+                        color2={i < heartCounts[3][1] ? "DC143C" : "C3C3C3"}
+                      />
+                    ))
+                  )}
                 </div>
               </div>
             </SwiperSlide>

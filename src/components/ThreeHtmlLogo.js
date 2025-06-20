@@ -1,5 +1,4 @@
 import * as THREE from 'three';
-import { RoundedBoxGeometry } from 'three-stdlib';
 import { useEffect, useRef } from 'react';
 
 const ThreeHtmlLogo = () => {
@@ -9,7 +8,7 @@ const ThreeHtmlLogo = () => {
         // 기본 세팅
         const scene = new THREE.Scene();
         const camera = new THREE.PerspectiveCamera(45, 1, 0.1, 1000);
-        camera.position.z = 50;
+        camera.position.z = 40;
 
         const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
         // renderer.setSize(200, 200);
@@ -22,16 +21,6 @@ const ThreeHtmlLogo = () => {
         const directional = new THREE.DirectionalLight(0xffffff, 1);
         directional.position.set(10, 10, 100);
         scene.add(directional);
-
-        // 주황색 큐브 (Rounded 처리 대신 bevel로 표현)
-        const cubeGeometry = new RoundedBoxGeometry(30, 30, 8, 10, 3);
-        const cubeMaterial = new THREE.MeshStandardMaterial({
-            color: 0xff5722,      // 주황색
-            metalness: 0,       // 금속성: 0~1 (0: 플라스틱, 1: 금속)
-            roughness: 0.4        // 표면 거칠기: 0~1 (0: 매끈, 1: 거칠)
-        });
-        const cube = new THREE.Mesh(cubeGeometry, cubeMaterial);
-        scene.add(cube);
 
         // 1. Shape 정의
         const scale = 0.2;
@@ -68,7 +57,7 @@ const ThreeHtmlLogo = () => {
         outer.holes.push(inner);
 
         const geometry = new THREE.ExtrudeGeometry(outer, { depth: 2, bevelEnabled: false });
-        const material = new THREE.MeshStandardMaterial({ color: 0xffffff });
+        const material = new THREE.MeshStandardMaterial({ color: 0xff5722 });
         const mesh = new THREE.Mesh(geometry, material);
         mesh.position.set(-6.5, 7, 8);
         scene.add(mesh);
@@ -78,9 +67,8 @@ const ThreeHtmlLogo = () => {
 
         const animate = () => {
             angle += 0.01;
-            cube.rotation.x = Math.sin(angle) * 0.2; // 앞뒤로 기울임
-            cube.rotation.y = Math.cos(angle) * 0.3;
-            mesh.rotation.copy(cube.rotation);
+            mesh.rotation.x = Math.sin(angle) * 0.2; // 앞뒤로 기울임
+            mesh.rotation.y = Math.cos(angle) * 0.3;
 
             renderer.render(scene, camera);
             requestAnimationFrame(animate);
@@ -95,7 +83,7 @@ const ThreeHtmlLogo = () => {
         };
     }, []);
 
-    return <div ref={mountRef} />;
+    return <div className="skill-icon" ref={mountRef} />;
 };
 
 export default ThreeHtmlLogo;
