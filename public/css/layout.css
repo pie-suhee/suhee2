@@ -627,7 +627,8 @@ html,
   border: 1px solid rgba(255, 87, 34, 1);
 }
 
-.sub_project .project_list > li .text_box .tag_box .tag.css {
+.sub_project .project_list > li .text_box .tag_box .tag.css,
+.sub_project .project_list > li .text_box .tag_box .tag.typescript {
   color: rgba(16, 115, 187, 1);
   border: 1px solid rgba(16, 115, 187, 1);
 }
@@ -635,6 +636,11 @@ html,
 .sub_project .project_list > li .text_box .tag_box .tag.javascript {
   color: rgba(255, 191, 0, 1);
   border: 1px solid rgba(255, 191, 0, 1);
+}
+
+.sub_project .project_list > li .text_box .tag_box .tag.react {
+  color: rgba(0, 183, 233, 1);
+  border: 1px solid rgba(0, 183, 233, 1);
 }
 
 .sub_project .project_list > li .text_box .detail {
