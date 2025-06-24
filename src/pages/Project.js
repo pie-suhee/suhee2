@@ -62,6 +62,13 @@ function Project() {
 
                     <div className="text_box">
                       <div className="title">{project.title}</div>
+                      <div className="status_box">
+                        <div className={`finish ${project.finish}`}>
+                          <div className="dot"></div>
+                          <div className="txt">{project.finish === 'y' ? '작업 완료' : '진행 중'}</div>
+                        </div>
+                        {project.contribution && <span>{project.contribution}%</span>}
+                      </div>
                       <ul className="tag_box">
                         {project.tags.map((tag) => (
                           <li key={tag} className={`tag ${tag}`}>
