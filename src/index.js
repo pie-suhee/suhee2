@@ -1,5 +1,3 @@
-import { Analytics } from "@vercel/analytics/react"
-
 import { createRoot } from 'react-dom/client';
 import Routes from "./Routes";
 
@@ -11,6 +9,5 @@ const root = createRoot(container);
 root.render(
   <Provider store={store}>
     <Routes />
-    <Analytics />
   </Provider>
 );
