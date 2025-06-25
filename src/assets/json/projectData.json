@@ -91,13 +91,13 @@
   },
   {
     "id": "10",
-    "title": "P*ee Onescan page",
-    "desc": "QR코드를 이용한 혜택과 제품인증을 확인할 수 있는 페이지입니다.",
+    "title": "P*ee",
+    "desc": "전체 유지보수를 담당했으며, oneScan 페이지의 QR코드를 이용한 혜택과 제품인증을 확인할 수 있는 페이지를 작업하였습니다.",
     "tags": ["html", "css", "javascript"],
     "finish": "y",
-    "contribution": "100",
+    "contribution": "10%, 100",
     "img": "prisbeeBg.png",
-    "url": "https://pie-suhee.github.io/portfolio/img/frisbee.png"
+    "url": "https://www.frisbeekorea.com/"
   },
   {
     "id": "11",
