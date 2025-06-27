@@ -70,6 +70,16 @@
     "url": "http://pfsb.co.kr/"
   },
   {
+    "id": "8",
+    "title": "ReactShop",
+    "_desc": "React 기반의 SPA 쇼핑몰 프로젝트로, 상품 목록, 상세 보기, 장바구니 기능 등을 구현했습니다.",
+    "tags": ["react", "html", "css", "typescript"],
+    "finish": "y",
+    "contribution": "100",
+    "img": "reactshopBg.png",
+    "url": "https://2025pj-reactshop.vercel.app/"
+  },
+  {
     "id": "9",
     "title": "O*O",
     "_desc": "React 모바일 커머스 앱 메인 화면의 퍼블리싱을 작업하였습니다.",
