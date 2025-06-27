@@ -105,7 +105,6 @@
     "desc": "트레이너와 회원 간 소통 앱입니다.",
     "tags": ["react", "html", "css", "javascript"],
     "finish": "n",
-    "img": "piumBg.png",
-    "url": "https://suhee2.vercel.app/project"
+    "img": "piumBg.png"
   }
 ]
