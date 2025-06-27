@@ -2,7 +2,7 @@
   {
     "id": "1",
     "title": "Toggle side nav",
-    "desc": "토글 버튼으로 사이드 내비게이션을 제어하는 인터랙션 UI를 구현했습니다.",
+    "_desc": "토글 버튼으로 사이드 내비게이션을 제어하는 인터랙션 UI를 구현했습니다.",
     "tags": ["html", "css", "javascript"],
     "finish": "y",
     "contribution": "100",
@@ -12,7 +12,7 @@
   {
     "id": "2",
     "title": "Analog clock",
-    "desc": "SVG와 JavaScript를 활용해 시간에 따라 배경이 변하는 인터랜티브 아날로그 시계를 구현했습니다.",
+    "_desc": "SVG와 JavaScript를 활용해 시간에 따라 배경이 변하는 인터랜티브 아날로그 시계를 구현했습니다.",
     "tags": ["html", "css", "javascript"],
     "finish": "y",
     "contribution": "100",
@@ -22,7 +22,7 @@
   {
     "id": "3",
     "title": "Star rating",
-    "desc": "마우스 인터랙션에 따라 별점을 선택할 수 있는 Star Rating UI를 구현했습니다.",
+    "_desc": "마우스 인터랙션에 따라 별점을 선택할 수 있는 Star Rating UI를 구현했습니다.",
     "tags": ["html", "css", "javascript"],
     "finish": "y",
     "contribution": "100",
@@ -32,7 +32,7 @@
   {
     "id": "4",
     "title": "Date picker",
-    "desc": "날짜 선택과 달력 탐색이 가능한 Calendar & Datepicker UI를 구현했습니다.",
+    "_desc": "날짜 선택과 달력 탐색이 가능한 Calendar & Datepicker UI를 구현했습니다.",
     "tags": ["html", "css", "javascript"],
     "finish": "y",
     "contribution": "100",
@@ -42,7 +42,7 @@
   {
     "id": "5",
     "title": "B*D",
-    "desc": "컬러 대비, 여백 설계, 콘텐츠 정렬 등 UI 설계 감각과 퍼블리싱 정교함을 보여주는 데 초점을 맞췄습니다.",
+    "_desc": "컬러 대비, 여백 설계, 콘텐츠 정렬 등 UI 설계 감각과 퍼블리싱 정교함을 보여주는 데 초점을 맞췄습니다.",
     "tags": ["html", "css", "javascript"],
     "finish": "y",
     "contribution": "100",
@@ -52,7 +52,7 @@
   {
     "id": "6",
     "title": "K*S",
-    "desc": "반응형 웹으로 구현해 다양한 디바이스 환경에서도 안정적인 UI를 제공했습니다.",
+    "_desc": "반응형 웹으로 구현해 다양한 디바이스 환경에서도 안정적인 UI를 제공했습니다.",
     "tags": ["html", "css", "javascript"],
     "finish": "y",
     "contribution": "100",
@@ -62,7 +62,7 @@
   {
     "id": "7",
     "title": "P*B",
-    "desc": "메인 페이지 및 서브 레이아웃의 퍼블리싱으로 반응형 구조와, 사용자 편의를 고려한 UI 구현에 중점을 두었습니다.",
+    "_desc": "메인 페이지 및 서브 레이아웃의 퍼블리싱으로 반응형 구조와, 사용자 편의를 고려한 UI 구현에 중점을 두었습니다.",
     "tags": ["html", "css", "javascript"],
     "finish": "y",
     "contribution": "100",
@@ -70,19 +70,9 @@
     "url": "http://pfsb.co.kr/"
   },
   {
-    "id": "8",
-    "title": "React shop",
-    "desc": "React 기반의 SPA 쇼핑몰 프로젝트로, 상품 목록, 상세 보기, 장바구니 기능 등을 구현했습니다.",
-    "tags": ["react", "html", "css", "typescript"],
-    "finish": "y",
-    "contribution": "80",
-    "img": "reactshopBg.png",
-    "url": "https://pie-suhee.github.io/2023PJ-reactshop/"
-  },
-  {
     "id": "9",
     "title": "O*O",
-    "desc": "React 모바일 커머스 앱 메인 화면의 퍼블리싱을 작업하였습니다.",
+    "_desc": "React 모바일 커머스 앱 메인 화면의 퍼블리싱을 작업하였습니다.",
     "tags": ["react", "html", "css", "javascript"],
     "finish": "y",
     "contribution": "20",
@@ -92,7 +82,7 @@
   {
     "id": "10",
     "title": "P*ee",
-    "desc": "전체 유지보수를 담당했으며, oneScan 페이지의 QR코드를 이용한 혜택과 제품인증을 확인할 수 있는 페이지를 작업하였습니다.",
+    "_desc": "전체 유지보수를 담당했으며, oneScan 페이지의 QR코드를 이용한 혜택과 제품인증을 확인할 수 있는 페이지를 작업하였습니다.",
     "tags": ["html", "css", "javascript"],
     "finish": "y",
     "contribution": "10%, 100",
@@ -102,7 +92,7 @@
   {
     "id": "11",
     "title": "Pium",
-    "desc": "트레이너와 회원 간 소통 앱입니다.",
+    "_desc": "트레이너와 회원 간 소통 앱입니다.",
     "tags": ["react", "html", "css", "javascript"],
     "finish": "n",
     "img": "piumBg.png"
