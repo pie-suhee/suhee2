@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import '../css/components.css';
+import '../assets/css/components.css';
 
 const LinkIcon = ({ img, link, size, txt }) => {
   let imgSrc;

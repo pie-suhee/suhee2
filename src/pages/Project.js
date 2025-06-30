@@ -1,6 +1,7 @@
-import { motion } from 'framer-motion';
+import { useEffect, useState } from 'react';
+import { useLocation, Link } from 'react-router-dom';
 
-import DetailText from '../components/DetailText'
+import { motion } from 'framer-motion';
 
 import projectData from '../assets/json/projectData.json';
 import maskPathList from '../assets/json/maskPathList.json';
@@ -12,13 +13,26 @@ const zoomCircleVariants = {
 };
 
 function Project() {
+  const location = useLocation();
+  const [fromDetailPage, setFromDetailPage] = useState(location.state?.fromDetail === true);
+
+  useEffect(() => {
+    if (fromDetailPage) {
+      const timer = setTimeout(() => {
+        setFromDetailPage(false);
+      }, 500);
+
+      return () => clearTimeout(timer);
+    }
+  }, [fromDetailPage]);
+
   return (
     <motion.div
       className="page-motion"
       variants={zoomCircleVariants}
-      initial="initial"
-      animate="animate"
-      exit="exit"
+      initial={fromDetailPage ? false : 'initial'}
+      animate={fromDetailPage ? false : 'animate'}
+      exit={fromDetailPage ? false : 'exit'}
     >
       <div className="sub sub_project">
         <div className="scroll_wrap">
@@ -30,7 +44,7 @@ function Project() {
             <ul className="project_list">
               {projectData.map((project, index) => (
                 <li key={project.id}>
-                  <a href={project.url} target="_blank" rel="noreferrer">
+                  <Link to={`/project/${index}`} key={index}>
                     <div className="img_box">
                       <svg>
                         <defs>
@@ -67,7 +81,6 @@ function Project() {
                           <div className="dot"></div>
                           <div className="txt">{project.finish === 'y' ? '작업 완료' : '진행 중'}</div>
                         </div>
-                        {project.contribution && <span>{project.contribution}%</span>}
                       </div>
                       <ul className="tag_box">
                         {project.tags.map((tag) => (
@@ -76,9 +89,8 @@ function Project() {
                           </li>
                         ))}
                       </ul>
-                      <DetailText>{project.desc}</DetailText>
                     </div>
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>

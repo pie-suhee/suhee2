@@ -1,7 +1,7 @@
 import LinkIcon from "../components/LinkIcon"
 import Widget from "../components/Widget"
 
-import '../css/components.css';
+import '../assets/css/components.css';
 
 function Main() {
   return (

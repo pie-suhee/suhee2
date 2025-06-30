@@ -64,7 +64,8 @@ html,
 /* sub E: */
 
 /* page-motion S: */
-.page-motion {
+.page-motion,
+.npage-motion {
   min-width: 100%;
   min-height: 100%;
   /* background-color: rgba(255, 255, 255, 1); */
@@ -569,7 +570,7 @@ html,
 .sub_project .project_list > li .img_box {
   width: 100%;
   aspect-ratio: 1/2;
-  background: linear-gradient(to right, rgba(241, 23, 6, 0.25), rgba(255, 255, 255, 0));
+  background: linear-gradient(to right, rgba(192, 192, 192, 0.65), rgba(255, 255, 255, 0));
   position: relative;
   overflow: hidden;
   flex-shrink: 0;
@@ -608,7 +609,7 @@ html,
 
 .sub_project .project_list > li .text_box .status_box {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 
@@ -678,19 +679,6 @@ html,
 .sub_project .project_list > li .text_box .tag_box .tag.react {
   color: rgba(0, 183, 233, 1);
   border: 1px solid rgba(0, 183, 233, 1);
-}
-
-.sub_project .project_list > li .text_box .detail {
-  flex-grow: 1;
-  min-height: 0;
-  overflow: hidden;
-}
-
-.sub_project .project_list > li .text_box .detail span {
-  display: inline-block;
-  text-align: center;
-  line-height: 1.4;
-  word-break: keep-all;
 }
 /* project E: */
 

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import alarmData from '../assets/json/alarmText.json';
-import '../css/components.css';
+import '../assets/css/components.css';
 
 const AlarmIcon = ({ img, type, size, txt, isAnyAlarmVisible, setIsAnyAlarmVisible }) => {
   let imgSrc;

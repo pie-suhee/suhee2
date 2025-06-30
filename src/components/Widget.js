@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-import '../css/components.css';
+import '../assets/css/components.css';
 
 const Widget = () => {
   /* 날짜 S: */

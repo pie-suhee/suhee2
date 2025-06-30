@@ -5,6 +5,7 @@ import Profile from './pages/Profile';
 import Timeline from './pages/Timeline';
 import Skill from './pages/Skill';
 import Project from './pages/Project';
+import ProjectDetail from './pages/ProjectDetail';
 import Footer from './components/Footer';
 
 const AppRoutes = () => {
@@ -20,6 +21,7 @@ const AppRoutes = () => {
                     <Route path="/timeline" element={<Timeline />} />
                     <Route path="/skill" element={<Skill />} />
                     <Route path="/project" element={<Project />} />
+                    <Route path="/project/:id" element={<ProjectDetail />} />
                 </Routes>
             </AnimatePresence>
             <Footer />

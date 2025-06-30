@@ -6,14 +6,13 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
 
 import ThreeHtmlLogo from '../components/ThreeHtmlLogo'
 import ThreeCssLogo from '../components/ThreeCssLogo'
 import ThreeJsLogo from '../components/ThreeJsLogo'
 import ThreeReactLogo from '../components/ThreeReactLogo'
 import ThreeHeart from '../components/ThreeHeart'
-import '../css/components.css';
+import '../assets/css/components.css';
 
 const zoomVariants = {
   initial: { opacity: 0, scale: 0.2, transition: { duration: 0 }},
