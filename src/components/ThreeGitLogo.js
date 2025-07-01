@@ -9,10 +9,10 @@ const ThreeGitLogo = () => {
     // 기본 세팅
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(45, 1, 0.1, 1000);
-    camera.position.z = 200;
+    camera.position.z = 180;
 
     const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
-    renderer.setSize(240, 240);
+    // renderer.setSize(240, 240);
     mountRef.current.appendChild(renderer.domElement);
 
     // 조명
@@ -47,7 +47,6 @@ const ThreeGitLogo = () => {
     });
 
     scene.add(group);
-    group.position.set(-10, 0, 0);
 
     // 애니메이션
     let angle = 0;

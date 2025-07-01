@@ -58,6 +58,7 @@ const ThreeJsLogo = () => {
             const textMaterial = new THREE.MeshStandardMaterial({ color: 0x222222 });
             const textMesh = new THREE.Mesh(textGeometry, textMaterial);
             scene.add(textMesh);
+            textMesh.position.set(-10, 0, 0);
 
             // 애니메이션
             let angle = 0;
