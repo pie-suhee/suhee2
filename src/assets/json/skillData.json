@@ -1,0 +1,34 @@
+[
+  {
+    "title": "HTML",
+    "three": "ThreeHtmlLogo"
+  },
+  {
+    "title": "CSS",
+    "three": "ThreeCssLogo"
+  },
+  {
+    "title": "JAVASCRIPT",
+    "three": "ThreeJsLogo"
+  },
+  {
+    "title": "THREE.JS",
+    "three": "ThreeLogo"
+  },
+  {
+    "title": "TYPESCRIPT",
+    "three": "ThreeTsLogo"
+  },
+  {
+    "title": "REACT",
+    "three": "ThreeReactLogo"
+  },
+  {
+    "title": "GIT",
+    "three": "ThreeGitLogo"
+  },
+  {
+    "title": "FIGMA",
+    "three": "ThreeFigmaLogo"
+  }
+]

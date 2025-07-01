@@ -4,7 +4,7 @@ import { useEffect, useRef } from 'react';
 import { FontLoader } from 'three/examples/jsm/loaders/FontLoader';
 import { TextGeometry } from 'three/examples/jsm/geometries/TextGeometry';
 
-const ThreeJsLogo = () => {
+const ThreeTsLogo = () => {
     const mountRef = useRef(null);
 
     useEffect(() => {
@@ -25,10 +25,10 @@ const ThreeJsLogo = () => {
         directional.position.set(5, 10, 50);
         scene.add(directional);
 
-        // 노란색 큐브 (Rounded 처리 대신 bevel로 표현)
+        // 파란색 큐브 (Rounded 처리 대신 bevel로 표현)
         const cubeGeometry = new RoundedBoxGeometry(30, 30, 8, 10, 3);
         const cubeMaterial = new THREE.MeshStandardMaterial({
-            color: 0xffe600,      // 노란색
+            color: 0x3178c6,      // 파란색
             metalness: 0,       // 금속성: 0~1 (0: 플라스틱, 1: 금속)
             roughness: 0.4        // 표면 거칠기: 0~1 (0: 매끈, 1: 거칠)
         });
@@ -38,7 +38,7 @@ const ThreeJsLogo = () => {
         // JS 텍스트
         const loader = new FontLoader();
         loader.load('/fonts/helvetiker_bold.typeface.json', (font) => {
-            const textGeometry = new TextGeometry('JS', {
+            const textGeometry = new TextGeometry('TS', {
                 font: font,
                 size: 8,
                 height: 0,
@@ -55,7 +55,7 @@ const ThreeJsLogo = () => {
 
             textGeometry.translate(-xMid, -yMin, -zMid);
 
-            const textMaterial = new THREE.MeshStandardMaterial({ color: 0x222222 });
+            const textMaterial = new THREE.MeshStandardMaterial({ color: 0xffffff });
             const textMesh = new THREE.Mesh(textGeometry, textMaterial);
             scene.add(textMesh);
 
@@ -85,4 +85,4 @@ const ThreeJsLogo = () => {
     return <div className="skill-icon" ref={mountRef} />;
 };
 
-export default ThreeJsLogo;
+export default ThreeTsLogo;
