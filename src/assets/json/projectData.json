@@ -55,7 +55,7 @@
     "url": "https://2025pj-reactshop.vercel.app/"
   },
   {
-    "title": "P*ee OneScan",
+    "title": "F*ee OneScan",
     "date": "2024.03.18 ~ 2024.04.08",
     "desc": "전체 ^유지보수^를 담당했으며, ^OneScan 페이지^의 QR코드를 이용한 혜택과 제품인증을 확인할 수 있는 페이지를 작업하였습니다.",
     "action": "사용기한을 실시간으로 계산 및 표시, 슬라이드, 탭 구현",
@@ -64,8 +64,9 @@
     "skill": "Html, Css, Javascript",
     "finish": "y",
     "contribution": "100%",
-    "img": "prisbeeBg.png",
-    "url": "https://www.frisbeekorea.com/shopMo/cSub/oneScan.do"
+    "img": "frisbeeBg.png",
+    "url": "https://www.frisbeekorea.com/shopMo/cSub/oneScan.do",
+    "screen": ["frisbee_screen1.png", "frisbee_screen2.png"]
   },
   {
     "title": "O*O",

@@ -128,6 +128,25 @@ function ProjectDetail() {
                       </div>
                     </div>
                   )}
+
+                  {projectData[projectId].screen && (
+                    <div className="block">
+                      <div className="title">
+                        스크린 샷
+                      </div>
+
+                      <ul className="screen_ul">
+                        {projectData[projectId].screen.map((src, idx) => (
+                          <li key={idx}>
+                            <img
+                              src={require(`../assets/img/project/${src}`)}
+                              alt={`스크린샷 ${idx + 1}`}
+                            />
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
                 </div>
               </div>
             </div>

@@ -92,3 +92,9 @@
     color: rgba(9, 105, 218, 1);
     font-weight: 500;
 }
+
+.sub_project_detail .contents .block .screen_ul {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
