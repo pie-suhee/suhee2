@@ -92,6 +92,18 @@ function ProjectDetail() {
                           <div className="contribution">{projectData[projectId].contribution}</div>
                         </li>
                       )}
+                      {projectData[projectId].plan && (
+                        <li>
+                          <div className="index">기획서</div>
+
+                          <button
+                            className="plan"
+                            onClick={() => window.open(projectData[projectId].plan, '_blank')}
+                          >
+                            기획서 URL
+                          </button>
+                        </li>
+                      )}
                       {projectData[projectId].git && (
                         <li>
                           <div className="index">깃허브</div>
