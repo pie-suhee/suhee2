@@ -1,0 +1,140 @@
+.sub_timeline {
+    background-color: rgba(255, 255, 255, 1);
+    background-image: 
+        linear-gradient(to right, rgba(0, 0, 0, 0.1) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
+    background-size: 30px 30px;
+    opacity: 0.99;
+    position: relative;
+}
+
+.sub_timeline .scroll_wrap {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.sub_timeline .timeline {
+    width: 100%;
+    height: 100%;
+    padding: 100px 5% 180px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.sub_timeline .timeline_title {
+  text-align: center;
+  font-size: min(15vw, 90px);
+  flex-shrink: 0;
+}
+
+.sub_timeline .card_layout {
+    width: 100%;
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-content: stretch;
+}
+
+.sub_timeline .card {
+    width: calc(40% - 10px);
+    height: calc((100% - 20px * 2) / 3);
+    position: relative;
+    transition: opacity 0.2s;
+}
+
+.sub_timeline .card.isOpen {
+    background-color: transparent;
+    border-radius: 0;
+    box-shadow: unset;
+}
+
+.sub_timeline .card:nth-child(4n + 1),
+.sub_timeline .card:nth-child(4n + 4) {
+    width: calc(60% - 10px);
+}
+
+.sub_timeline .card_thumb {
+    width: 100%;
+    height: 100%;
+}
+
+.sub_timeline .card .card_area {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    position: fixed;
+    overflow: hidden;
+    flex-direction: column;
+}
+
+.sub_timeline .card .overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 999;
+}
+
+.sub_timeline .card.on .overlay {
+    display: block;
+}
+
+.sub_timeline .card .card_area .card_front {
+    width: 100%;
+    min-height: 0;
+    position: relative;
+    flex: 1;
+}
+
+.sub_timeline .card .card_area .card_front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.sub_timeline .card .card_area .card_expanded_top {
+    width: 100%;
+    background: linear-gradient(to top, rgba(255, 255, 255, 0) 10%, rgba(255, 255, 255, 1) 55%);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.sub_timeline .card .card_area .card_expanded_top .title {
+    padding: 5% 5% 0 5%;
+    font-size: clamp(20px, 5vw, 30px);
+    font-weight: 500;
+    line-height: 1;
+}
+
+.sub_timeline .card .card_area .card_expanded_top .year {
+    padding: 8px 5% 10% 5%;
+    font-size: clamp(14px, 3vw, 20px);
+    font-weight: 500;
+    line-height: 1;
+}
+
+.sub_timeline .card .card_area .card_expanded_btm {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 1);
+    flex-shrink: 0;
+}
+
+.sub_timeline .card .card_area .card_expanded_btm ul {
+    padding: 3% 5%;
+}
+
+.sub_timeline .card .card_area .card_expanded_btm ul li {
+    font-size: clamp(10px, 2vw, 16px);
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+
+

@@ -14,14 +14,14 @@
     padding: 0 5% 180px;
 }
 
-.skill-card {
+.sub_skill .skill-card {
     width: 90%;
     max-width: 500px;
     margin: 0 auto;
     padding-bottom: 120px;
 }
 
-.card-container {
+.sub_skill .card-container {
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -31,7 +31,7 @@
     margin-bottom: -120px;
 }
 
-.card {
+.sub_skill .card {
     width: 70%;
     max-width: 300px;
     aspect-ratio: 300/430;

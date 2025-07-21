@@ -1,5 +1,8 @@
 import { motion } from 'framer-motion';
-import FadeUpSection from '../components/FadeUpSection';
+
+import Card from '../components/Card';
+
+import '../assets/css/timeline.css';
 
 const zoomVariants = {
   initial: { opacity: 0, scale: 0.2, transition: { duration: 0 }},
@@ -19,112 +22,90 @@ function Timeline() {
       <div className="sub sub_timeline">
         <div className="scroll_wrap">
           <div className="timeline">
-            <div className="timeline-item"></div>
-            <div className="timeline-item line"></div>
-            <div className="timeline-item title">
-              Suhee's <br />
-              Career <br />
-              <span className="red">Timeline</span>
+            <div className="timeline_title alagambe">
+              timeline
             </div>
-
-            <div className="timeline-item right">
-              <FadeUpSection>
-                <ul className="list_box">
-                  <li>
-                    <div className="date">2021.08</div>
-                    <div className="content">웹 디자인 기능사 취득</div>
-                  </li>
-                  <li>
-                    <div className="date">2021.10</div>
-                    <div className="content">H* 그룹 입사</div>
-                    <ul className="detail">
-                      <li>*비아 유지 보수</li>
-                      <li>반응형 이벤트 페이지</li>
-                      <li>*손명가 통합 페이지</li>
-                    </ul>
-                  </li>
-                </ul>
-              </FadeUpSection>
+            <div className="card_layout">
+              <Card>
+                <Card.Front>
+                  <img src={require(`../assets/img/timeline/2021.jpg`)} alt="2021" />
+                </Card.Front>
+                <Card.ExpandedTop>
+                  <div className="title">The first step</div>
+                  <div className="year">2021</div>
+                </Card.ExpandedTop>
+                <Card.ExpandedBtm>
+                  <ul>
+                    <li>2021.08 / 웹 디자인 기능사 취득</li>
+                    <li>2021.10 / H* 그룹(웹 에이전시) 입사</li>
+                  </ul>
+                </Card.ExpandedBtm>
+              </ Card>
+              <Card>
+                <Card.Front>
+                  <img src={require(`../assets/img/timeline/2022.jpg`)} alt="2022" />
+                </Card.Front>
+                <Card.ExpandedTop>
+                  <div className="title">Gaining experience</div>
+                  <div className="year">2022</div>
+                </Card.ExpandedTop>
+                <Card.ExpandedBtm>
+                  <ul>
+                    <li>2022.04 / K*S 반응형 이벤트 페이지 제작</li>
+                    <li>2022.06 / P*B 반응형 웹 사이트 제작</li>
+                    <li>2022.09 / B*D 반응형 이벤트 페이지 제작</li>
+                  </ul>
+                </Card.ExpandedBtm>
+              </ Card>
+              <Card>
+                <Card.Front>
+                  <img src={require(`../assets/img/timeline/2023.jpg`)} alt="2023" />
+                </Card.Front>
+                <Card.ExpandedTop>
+                  <div className="title">Time for a revamp</div>
+                  <div className="year">2023</div>
+                </Card.ExpandedTop>
+                <Card.ExpandedBtm>
+                  <ul>
+                    <li>2023.07 / 강남 그린 아카데미 프론트엔드 SW개발자 양성과정 수료</li>
+                    <li>2023.07 / 제로베이스 프론트엔드 스쿨 수료</li>
+                  </ul>
+                </Card.ExpandedBtm>
+              </ Card>
+              <Card>
+                <Card.Front>
+                  <img src={require(`../assets/img/timeline/2024.jpg`)} alt="2024" />
+                </Card.Front>
+                <Card.ExpandedTop>
+                  <div className="title">Shaped by experience</div>
+                  <div className="year">2024</div>
+                </Card.ExpandedTop>
+                <Card.ExpandedBtm>
+                  <ul>
+                    <li>2024.03 / *플러 입사</li>
+                    <li>2024.04 / *CO(React) 페이지</li>
+                    <li>2024.03 ~ 2024.08 / *진 개정수학 (테블릿 적용 컨텐츠)</li>
+                    <li>2024.08 ~ / *래엔 엠티쳐</li>
+                  </ul>
+                </Card.ExpandedBtm>
+              </ Card>
+              <Card>
+                <Card.Front>
+                  <img src={require(`../assets/img/timeline/2025.jpg`)} alt="2025" />
+                </Card.Front>
+                <Card.ExpandedTop>
+                  <div className="title">Update underway</div>
+                  <div className="year">2025</div>
+                </Card.ExpandedTop>
+                <Card.ExpandedBtm>
+                  <ul>
+                    <li>2025.02 / 헬스노트 (개인 프로젝트)</li>
+                    <li>2025.02 / 모노브레인 입사</li>
+                    <li>2025.03 / *이스크림 교육 컨텐츠 작업</li>
+                  </ul>
+                </Card.ExpandedBtm>
+              </ Card>
             </div>
-            <div className="timeline-item line left img pc">
-              20<br />
-              21
-          
-              <img src={require(`../assets/img/timeline/pc.png`)} alt="컴퓨터" />
-            </div>
-            <div className="timeline-item"></div>
-
-            <div className="timeline-item"></div>
-            <div className="timeline-item line right img dream">
-              20<br />
-              23
-
-              <img src={require(`../assets/img/timeline/dream.png`)} alt="드림캐쳐" />
-            </div>
-            <div className="timeline-item left">
-              <FadeUpSection>
-                <ul className="list_box">
-                  <li>
-                    <div className="date">2023.07</div>
-                    <div className="content">강남 그린 아카데미 프론트엔드 SW개발자 양성과정</div>
-                    <div className="content">제로베이스 프론트엔드 스쿨</div>
-                    <ul className="detail">
-                      <li>Frontend Frameworks(React)</li>
-                      <li>SCSS</li>
-                    </ul>
-                  </li>
-                </ul>
-              </FadeUpSection>
-            </div>
-
-            <div className="timeline-item right">
-              <FadeUpSection>
-                <ul className="list_box">
-                  <li>
-                    <div className="date">2024.03</div>
-                    <div className="content">*플러 입사</div>
-                    <ul className="detail">
-                      <li>*CO(React) 페이지</li>
-                      <li>*진 개정수학 (테블릿 적용 컨텐츠)</li>
-                      <li>*래엔 엠티쳐</li>
-                      <li>헬스노트 (서브 프로젝트)</li>
-                    </ul>
-                  </li>
-                </ul>
-              </FadeUpSection>
-            </div>
-            <div className="timeline-item line left img strawberry">
-              20<br />
-              24
-
-              <img src={require(`../assets/img/timeline/strawberry.png`)} alt="딸기" />
-            </div>
-            <div className="timeline-item"></div>
-
-            <div className="timeline-item"></div>
-            <div className="timeline-item line right img softserve">
-              20<br />
-              25
-
-              <img src={require(`../assets/img/timeline/softserve.png`)} alt="아이스크림" />
-            </div>
-            <div className="timeline-item left">
-              <FadeUpSection>
-                <ul className="list_box">
-                  <li>
-                    <div className="date">2025.02</div>
-                    <div className="content">**브레인 입사</div>
-                    <ul className="detail">
-                      <li>*이스크림 교과서</li>
-                    </ul>
-                  </li>
-                </ul>
-              </FadeUpSection>
-            </div>
-
-            <div className="timeline-item"></div>
-            <div className="timeline-item line"></div>
-            <div className="timeline-item"></div>
           </div>
         </div>
       </div>
