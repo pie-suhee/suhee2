@@ -101,7 +101,6 @@ function Timeline() {
                   <ul>
                     <li>2025.02 / 헬스노트 (개인 프로젝트)</li>
                     <li>2025.02 / 모노브레인 입사</li>
-                    <li>2025.03 / *이스크림 교육 컨텐츠 작업</li>
                   </ul>
                 </Card.ExpandedBtm>
               </ Card>
