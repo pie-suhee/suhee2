@@ -11,10 +11,12 @@ const ThreeGitLogo = () => {
     const camera = new THREE.PerspectiveCamera(45, 1, 0.1, 1000);
     camera.position.z = 180;
 
+    const currentMount = mountRef.current;
+
     const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
     // renderer.setSize(240, 240);
     if (mountRef) {
-      mountRef.current.appendChild(renderer.domElement);
+      currentMount.appendChild(renderer.domElement);
     }
 
     // 조명
@@ -63,7 +65,7 @@ const ThreeGitLogo = () => {
 
     return () => {
       renderer.dispose();
-      if (mountRef.current) mountRef.current.innerHTML = '';
+      if (currentMount) currentMount.innerHTML = '';
     };
   }, []);
 

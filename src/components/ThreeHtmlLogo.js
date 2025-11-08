@@ -10,10 +10,12 @@ const ThreeHtmlLogo = () => {
         const camera = new THREE.PerspectiveCamera(45, 1, 0.1, 1000);
         camera.position.z = 40;
 
+        const currentMount = mountRef.current;
+
         const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
         // renderer.setSize(200, 200);
         if (mountRef) {
-            mountRef.current.appendChild(renderer.domElement);
+            currentMount.appendChild(renderer.domElement);
         }
 
         // 조명
@@ -79,8 +81,8 @@ const ThreeHtmlLogo = () => {
 
         return () => {
             renderer.dispose();
-            if (mountRef.current) {
-                mountRef.current.innerHTML = '';
+            if (currentMount) {
+                currentMount.innerHTML = '';
             }
         };
     }, []);

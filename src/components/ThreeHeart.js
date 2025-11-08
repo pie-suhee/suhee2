@@ -43,9 +43,10 @@ const ThreeHeart = ({ color1, color2 }) => {
     const mountRef = useRef(null);
     const rendererRef = useRef(null);
     const animationIdRef = useRef(null);
+    const currentMount = mountRef.current;
 
     useEffect(() => {
-        if (!mountRef.current || rendererRef.current) return;
+        if (!currentMount || rendererRef.current) return;
 
         const scene = new THREE.Scene();
         const camera = new THREE.PerspectiveCamera(45, 1, 0.1, 1000);
@@ -54,7 +55,7 @@ const ThreeHeart = ({ color1, color2 }) => {
         const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
         renderer.localClippingEnabled = true;
         if (mountRef) {
-            mountRef.current.appendChild(renderer.domElement);
+            currentMount.appendChild(renderer.domElement);
         }
 
         rendererRef.current = renderer;
@@ -86,7 +87,7 @@ const ThreeHeart = ({ color1, color2 }) => {
         return () => {
             if (animationIdRef.current) cancelAnimationFrame(animationIdRef.current);
             renderer.dispose();
-            if (mountRef.current) mountRef.current.innerHTML = '';
+            if (currentMount) currentMount.innerHTML = '';
             rendererRef.current = null;
         };
     }, [color1, color2]);
