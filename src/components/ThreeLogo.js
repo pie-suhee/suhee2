@@ -12,7 +12,9 @@ const ThreeLogo = () => {
 
     const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
     // renderer.setSize(200, 200);
-    mountRef.current.appendChild(renderer.domElement);
+    if (mountRef) {
+      mountRef.current.appendChild(renderer.domElement);
+    }
 
     // 조명
     const ambient = new THREE.AmbientLight(0xffffff, 1.5);

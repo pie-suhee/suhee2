@@ -13,7 +13,9 @@ const ThreeFigmaLogo = () => {
 
     const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
     // renderer.setSize(240, 240);
-    mountRef.current.appendChild(renderer.domElement);
+    if (mountRef) {
+      mountRef.current.appendChild(renderer.domElement);
+    }
 
     // 조명
     scene.add(new THREE.AmbientLight(0xffffff, 1.2));

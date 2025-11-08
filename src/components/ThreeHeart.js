@@ -53,7 +53,9 @@ const ThreeHeart = ({ color1, color2 }) => {
 
         const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
         renderer.localClippingEnabled = true;
-        mountRef.current.appendChild(renderer.domElement);
+        if (mountRef) {
+            mountRef.current.appendChild(renderer.domElement);
+        }
 
         rendererRef.current = renderer;
 
