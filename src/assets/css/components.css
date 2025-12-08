@@ -55,7 +55,7 @@ img.icon {
     animation: spin 4s linear infinite;
 }
 
-.icon + span {
+.icon + figcaption {
     display: inline-block;
     width: 100%;
     font-size: 12px;
@@ -63,7 +63,7 @@ img.icon {
     text-align: center;
 }
 
-.icon.big + span {
+.icon.big + figcaption {
     bottom: -4px;
 }
 /* icon E: */

@@ -11,10 +11,10 @@ const LinkIcon = ({ img, link, size, txt }) => {
   }
 
   return (
-    <div className="iconBox">
+    <figure className="iconBox">
       <Link to={link} className={`icon ${size} ${img}`} style={{backgroundImage: `url(${imgSrc})`}}></Link>
-      <span>{txt}</span>
-    </div>
+      <figcaption>{txt}</figcaption>
+    </figure>
   );
 };
 

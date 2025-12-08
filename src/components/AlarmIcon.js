@@ -40,10 +40,10 @@ const AlarmIcon = ({ img, type, size, txt, isAnyAlarmVisible, setIsAnyAlarmVisib
 
   return (
     <>
-      <div className="iconBox" onClick={handleClick}>
+      <figure className="iconBox" onClick={handleClick}>
         <img src={imgSrc} className={`icon ${size} ${img}`} alt={`${img} 아이콘`} />
-        <span>{txt}</span>
-      </div>
+        <figcaption>{txt}</figcaption>
+      </figure>
 
       <div className={`alarmBox ${alarmState}`}>
         <img src={imgSrc} className={`icon ${size} ${img}`} alt={`${img} 아이콘`} />
