@@ -1,18 +1,5 @@
 [
   {
-    "title": "P*B",
-    "date": "2022.06.13 ~ 2022.06.27",
-    "desc": "단순 이벤트 페이지가 아닌, ^메인과 다양한 서브 페이지를 포함^한 구조의 퍼블리싱을$처음으로 맡아 진행한 프로젝트입니다.$반응형 대응과 사용자 중심의 UI 구현에 중점을 두었으며,$^로그인 및 회원가입 페이지^도 함께 구성하였으나, 기획 변경으로 해당 페이지는 최종 반영되지 않았습니다.",
-    "action": "서브 페이지, 슬라이드 구현",
-    "trouble": "",
-    "tags": ["html", "css", "javascript"],
-    "skill": "Html, Css, Javascript",
-    "finish": "y",
-    "contribution": "100%",
-    "img": "pfsbBg.png",
-    "url": "http://pfsb.co.kr/"
-  },
-  {
     "title": "B*D",
     "date": "2022.09.08 ~ 2022.09.13",
     "desc": "B*D는 ^회사 소개 이벤트 페이지^입니다.$^반응형에서도 무너지지 않는 UI^를 만들기 위해 노력했습니다.",
@@ -26,6 +13,20 @@
     "git": "https://github.com/pie-suhee/portfolio/tree/main/bcd",
     "url": "https://pie-suhee.github.io/portfolio/bcd/"
   },
+  {
+    "title": "P*B",
+    "date": "2022.06.13 ~ 2022.06.27",
+    "desc": "단순 이벤트 페이지가 아닌, ^메인과 다양한 서브 페이지를 포함^한 구조의 퍼블리싱을$처음으로 맡아 진행한 프로젝트입니다.$반응형 대응과 사용자 중심의 UI 구현에 중점을 두었으며,$^로그인 및 회원가입 페이지^도 함께 구성하였으나, 기획 변경으로 해당 페이지는 최종 반영되지 않았습니다.",
+    "action": "서브 페이지, 슬라이드 구현",
+    "trouble": "",
+    "tags": ["html", "css", "javascript"],
+    "skill": "Html, Css, Javascript",
+    "finish": "y",
+    "contribution": "100%",
+    "img": "pfsbBg.png",
+    "url": "http://pfsb.co.kr/"
+  },
+  
   {
     "title": "F*ee OneScan",
     "date": "2024.03.18 ~ 2024.04.08",
