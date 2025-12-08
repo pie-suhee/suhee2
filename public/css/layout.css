@@ -415,8 +415,8 @@ html,
 }
 /* project E: */
 
-/* footer S: */
-footer {
+/* nav S: */
+nav {
   width: fit-content;
   margin: 0 auto;
   padding: min(3vw, 10px) 2vw;
@@ -429,12 +429,12 @@ footer {
   z-index: 100;
 }
 
-footer ul {
+nav ul {
   display: inline-flex;
   justify-content: center;
   gap: min(2vw, 20px);
 }
-/* footer E: */
+/* nav E: */
 
 @media all and (max-width: 1600px) {
   /* timeline S: */

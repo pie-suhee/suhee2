@@ -6,7 +6,7 @@ import Timeline from './pages/Timeline';
 import Skill from './pages/Skill';
 import Project from './pages/Project';
 import ProjectDetail from './pages/ProjectDetail';
-import Footer from './components/Footer';
+import Nav from './components/Nav';
 
 const AppRoutes = () => {
     const location = useLocation();
@@ -24,7 +24,7 @@ const AppRoutes = () => {
                     <Route path="/project/:id" element={<ProjectDetail />} />
                 </Routes>
             </AnimatePresence>
-            <Footer />
+            <Nav />
         </>
     );
 };

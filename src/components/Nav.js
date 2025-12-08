@@ -7,7 +7,7 @@ const Footer = () => {
   const [isAnyAlarmVisible, setIsAnyAlarmVisible] = useState(false);
 
   return (
-    <footer>
+    <nav>
       <ul>
         <li>
           <LinkIcon link={"/"} img={"jelly"} size={"small"} txt={"home"} />
@@ -22,7 +22,7 @@ const Footer = () => {
           <AlarmIcon type={"phone"} img={"phone"} size={"small"} txt={"phone"} isAnyAlarmVisible={isAnyAlarmVisible} setIsAnyAlarmVisible={setIsAnyAlarmVisible} />
         </li>
       </ul>
-    </footer>
+    </nav>
   );
 };
 
