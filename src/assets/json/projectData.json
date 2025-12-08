@@ -1,19 +1,5 @@
 [
   {
-    "title": "K*S",
-    "date": "2022.04.19 ~ 2022.04.22",
-    "desc": "K*S는 ^교육 정보 및 신청 이벤트 페이지^입니다.$다양한 상황에 대응할 수 있도록 ^재사용성^과 ^확장성^을 고려하여 작업하였습니다.",
-    "action": "반응형 UI, 호버 애니메이션, 슬라이드, 입력 폼 구현",
-    "trouble": "^반복 사용 가능한 구조^에서 항목 수가 유동적인 탓에 :nth-child로 마지막 테두리를 제거하는 데 한계가 있었습니다.$이에 따라 ^대목록의 상단 테두리 위치를 조정^하여, 소목록 하단 테두리가 노출되지 않도록 처리했습니다.",
-    "tags": ["html", "css", "javascript"],
-    "skill": "Html, Css, Javascript",
-    "finish": "y",
-    "contribution": "100%",
-    "img": "kclsBg.png",
-    "git": "https://github.com/pie-suhee/portfolio/tree/main/ekcls",
-    "url": "https://pie-suhee.github.io/portfolio/ekcls/"
-  },
-  {
     "title": "P*B",
     "date": "2022.06.13 ~ 2022.06.27",
     "desc": "단순 이벤트 페이지가 아닌, ^메인과 다양한 서브 페이지를 포함^한 구조의 퍼블리싱을$처음으로 맡아 진행한 프로젝트입니다.$반응형 대응과 사용자 중심의 UI 구현에 중점을 두었으며,$^로그인 및 회원가입 페이지^도 함께 구성하였으나, 기획 변경으로 해당 페이지는 최종 반영되지 않았습니다.",
