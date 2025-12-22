@@ -72,10 +72,12 @@ function ProjectDetail() {
                     </div>
 
                     <ul>
+                      {projectData[projectId].date && (
                       <li>
                         <div className="index">기간</div>
                         <div className="date">{projectData[projectId].date}</div>
                       </li>
+                      )}
                       {projectData[projectId].action && (
                         <li>
                           <div className="index">주요 기능</div>

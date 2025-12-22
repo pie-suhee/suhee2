@@ -1,5 +1,17 @@
 [
   {
+    "title": "DRAGNDROP",
+    "desc": "^Drag N Drop^ 기능 페이지입니다.$Touch Drag-and-Drop 라이브러리를 사용하여 만들었습니다.",
+    "action": "드래그 앤 드롭",
+    "tags": ["html", "css", "javascript"],
+    "skill": "Html, Css, Javascript",
+    "finish": "y",
+    "contribution": "100%",
+    "img": "dragNdrop.png",
+    "git": "https://github.com/pie-suhee/portfolio/tree/main/function/dragndrop",
+    "url": "https://pie-suhee.github.io/portfolio/function/dragndrop"
+  },
+  {
     "title": "B*D",
     "date": "2022.09.08 ~ 2022.09.13",
     "desc": "B*D는 ^회사 소개 이벤트 페이지^입니다.$^반응형에서도 무너지지 않는 UI^를 만들기 위해 노력했습니다.",
