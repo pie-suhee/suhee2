@@ -3,6 +3,7 @@
     "title": "DRAGNDROP",
     "desc": "^Drag N Drop^ 기능 페이지입니다.$Touch Drag-and-Drop 라이브러리를 사용하여 만들었습니다.",
     "action": "드래그 앤 드롭",
+    "trouble": "페이지 진입 시 드래그 앤 드롭 기능이 작동하지 않으며, ^새로고침^을 해야만 정상적으로 동작하는 현상 발생$스크립트 실행 순서 불일치, 랜더링 문제로 실행 시점을 제어하여 수정하였습니다.",
     "tags": ["html", "css", "javascript"],
     "skill": "Html, Css, Javascript",
     "finish": "y",
